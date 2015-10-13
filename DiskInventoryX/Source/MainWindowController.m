@@ -9,7 +9,7 @@
 #import "MainWindowController.h"
 #import "InfoPanelController.h"
 #import "Timing.h"
-#import <TreeMapView/TreeMapView.h>
+#import "TreeMapView.h"
 #import "FSItem-Utilities.h"
 #import "FileSizeTransformer.h"
 #import <CocoaTechStrings/NTLocalizedString.h>

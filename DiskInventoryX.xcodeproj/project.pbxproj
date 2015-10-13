@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19CB21181BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB210E1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.h */; settings = {ASSET_TAGS = (); }; };
+		19CB21191BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB210F1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.m */; settings = {ASSET_TAGS = (); }; };
+		19CB211A1BCCE6B800233107 /* TMVCushionRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB21101BCCE6B800233107 /* TMVCushionRenderer.h */; settings = {ASSET_TAGS = (); }; };
+		19CB211B1BCCE6B800233107 /* TMVCushionRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB21111BCCE6B800233107 /* TMVCushionRenderer.m */; settings = {ASSET_TAGS = (); }; };
+		19CB211C1BCCE6B800233107 /* TMVItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB21121BCCE6B800233107 /* TMVItem.h */; settings = {ASSET_TAGS = (); }; };
+		19CB211D1BCCE6B800233107 /* TMVItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB21131BCCE6B800233107 /* TMVItem.m */; settings = {ASSET_TAGS = (); }; };
+		19CB211E1BCCE6B800233107 /* TreeMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB21141BCCE6B800233107 /* TreeMapView.h */; settings = {ASSET_TAGS = (); }; };
+		19CB211F1BCCE6B800233107 /* TreeMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB21151BCCE6B800233107 /* TreeMapView.m */; settings = {ASSET_TAGS = (); }; };
+		19CB21201BCCE6B800233107 /* ZoomInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB21161BCCE6B800233107 /* ZoomInfo.h */; settings = {ASSET_TAGS = (); }; };
+		19CB21211BCCE6B800233107 /* ZoomInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB21171BCCE6B800233107 /* ZoomInfo.m */; settings = {ASSET_TAGS = (); }; };
 		8D15AC290486D014006FF6A4 /* DiskInventoryX_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF750370BD2300C91783 /* DiskInventoryX_Prefix.pch */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
@@ -183,6 +193,16 @@
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		19CB210E1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBitmapImageRep-CreationExtensions.h"; sourceTree = "<group>"; };
+		19CB210F1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBitmapImageRep-CreationExtensions.m"; sourceTree = "<group>"; };
+		19CB21101BCCE6B800233107 /* TMVCushionRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMVCushionRenderer.h; sourceTree = "<group>"; };
+		19CB21111BCCE6B800233107 /* TMVCushionRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMVCushionRenderer.m; sourceTree = "<group>"; };
+		19CB21121BCCE6B800233107 /* TMVItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMVItem.h; sourceTree = "<group>"; };
+		19CB21131BCCE6B800233107 /* TMVItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMVItem.m; sourceTree = "<group>"; };
+		19CB21141BCCE6B800233107 /* TreeMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeMapView.h; sourceTree = "<group>"; };
+		19CB21151BCCE6B800233107 /* TreeMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeMapView.m; sourceTree = "<group>"; };
+		19CB21161BCCE6B800233107 /* ZoomInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomInfo.h; sourceTree = "<group>"; };
+		19CB21171BCCE6B800233107 /* ZoomInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomInfo.m; sourceTree = "<group>"; };
 		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -635,8 +655,18 @@
 		FCBEF4D4054C3F30007ABD71 /* TreeMapView Classes */ = {
 			isa = PBXGroup;
 			children = (
+				19CB210E1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.h */,
+				19CB210F1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.m */,
+				19CB21101BCCE6B800233107 /* TMVCushionRenderer.h */,
+				19CB21111BCCE6B800233107 /* TMVCushionRenderer.m */,
+				19CB21121BCCE6B800233107 /* TMVItem.h */,
+				19CB21131BCCE6B800233107 /* TMVItem.m */,
+				19CB21141BCCE6B800233107 /* TreeMapView.h */,
+				19CB21151BCCE6B800233107 /* TreeMapView.m */,
 				FC75525D054C3BFF00BBC68D /* TreeMapViewController.m */,
 				FC75525E054C3BFF00BBC68D /* TreeMapViewController.h */,
+				19CB21161BCCE6B800233107 /* ZoomInfo.h */,
+				19CB21171BCCE6B800233107 /* ZoomInfo.m */,
 			);
 			name = "TreeMapView Classes";
 			path = DiskInventoryX/Source;
@@ -670,10 +700,12 @@
 				FC755282054C3BFF00BBC68D /* OffscreenGWorld.h in Headers */,
 				FC755286054C3BFF00BBC68D /* MyDocumentController.h in Headers */,
 				FC755288054C3BFF00BBC68D /* MainWindowController.h in Headers */,
+				19CB211A1BCCE6B800233107 /* TMVCushionRenderer.h in Headers */,
 				FC75528A054C3BFF00BBC68D /* ImageAndTextCell.h in Headers */,
 				FC75528C054C3BFF00BBC68D /* FSItem.h in Headers */,
 				FC75528E054C3BFF00BBC68D /* FileTypeColors.h in Headers */,
 				FC755290054C3BFF00BBC68D /* FileSystemDoc.h in Headers */,
+				19CB211C1BCCE6B800233107 /* TMVItem.h in Headers */,
 				FC755292054C3BFF00BBC68D /* FilesOutlineViewController.h in Headers */,
 				FC755294054C3BFF00BBC68D /* FileKindsTableController.h in Headers */,
 				FCC564780615EA5E00C5884D /* FileSizeFormatter.h in Headers */,
@@ -688,8 +720,10 @@
 				FC9F6B530754947B00951B41 /* Preferences.h in Headers */,
 				FC6E8D820758EE3F00500E6F /* GeneralPrefPage.h in Headers */,
 				FC37D63A075905CA00209C78 /* TreeMapPrefPage.h in Headers */,
+				19CB21181BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.h in Headers */,
 				FC37D88F075A561700209C78 /* PrefsPanelController.h in Headers */,
 				FC37DADB075B407B00209C78 /* PrefsPageBase.h in Headers */,
+				19CB211E1BCCE6B800233107 /* TreeMapView.h in Headers */,
 				FCA4C2B5075B67940064125F /* NTFSRefObject-AccessExtensions.h in Headers */,
 				FCA4D3FF075E15630064125F /* OAToolbarWindowControllerEx.h in Headers */,
 				FC528AC7076079B500374589 /* LoadingPanelController.h in Headers */,
@@ -703,6 +737,7 @@
 				FC79EEAD07FC3822000BEBFA /* NSTableViewWithContextMenu.h in Headers */,
 				FC79F14A07FD45A4000BEBFA /* FSItemIndex.h in Headers */,
 				FC6D4B230804040600E21F6D /* DIXFinderCMInstaller.h in Headers */,
+				19CB21201BCCE6B800233107 /* ZoomInfo.h in Headers */,
 				FC3112E20805857B00075F08 /* FinderCMPrefPage.h in Headers */,
 				FC27C272080728D90073CDF9 /* NTFileDesc-Utilities.h in Headers */,
 			);
@@ -860,18 +895,23 @@
 				FC6E8D830758EE3F00500E6F /* GeneralPrefPage.m in Sources */,
 				FC37D63B075905CA00209C78 /* TreeMapPrefPage.m in Sources */,
 				FC37D890075A561700209C78 /* PrefsPanelController.m in Sources */,
+				19CB21191BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.m in Sources */,
 				FC37DADC075B407B00209C78 /* PrefsPageBase.m in Sources */,
 				FCA4C2B6075B67940064125F /* NTFSRefObject-AccessExtensions.m in Sources */,
 				FCA4D400075E15630064125F /* OAToolbarWindowControllerEx.m in Sources */,
 				FC528AC8076079B500374589 /* LoadingPanelController.m in Sources */,
+				19CB211F1BCCE6B800233107 /* TreeMapView.m in Sources */,
 				FC0DEA0E07625B230049E191 /* DIXFileInfoView.m in Sources */,
+				19CB211B1BCCE6B800233107 /* TMVCushionRenderer.m in Sources */,
 				FC26D09707F4326E00301D86 /* GenericArrayController.m in Sources */,
 				FC26D1F407F4559B00301D86 /* FileSizeTransformer.m in Sources */,
 				FC26D54207F48B1300301D86 /* SelectionListTableController.m in Sources */,
 				FC6ADCCB07F99934006FE39B /* NSOutlineView-ContextMenuExtension.m in Sources */,
 				FC6DEA0007FBE44A00581F63 /* FileKindsPopupController.m in Sources */,
+				19CB21211BCCE6B800233107 /* ZoomInfo.m in Sources */,
 				FC6DEA7107FBED8C00581F63 /* SelectionListController.m in Sources */,
 				FC79EEAE07FC3822000BEBFA /* NSTableViewWithContextMenu.m in Sources */,
+				19CB211D1BCCE6B800233107 /* TMVItem.m in Sources */,
 				FC79F14B07FD45A4000BEBFA /* FSItemIndex.m in Sources */,
 				FC6D4B240804040600E21F6D /* DIXFinderCMInstaller.m in Sources */,
 				FC3112E30805857B00075F08 /* FinderCMPrefPage.m in Sources */,
