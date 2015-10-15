@@ -7,69 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19A60BB21BCF36D300FD3D27 /* Volume.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A60BB01BCF36D300FD3D27 /* Volume.h */; settings = {ASSET_TAGS = (); }; };
+		19A60BB31BCF36D300FD3D27 /* Volume.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A60BB11BCF36D300FD3D27 /* Volume.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
+		19A60CC21BCF548800FD3D27 /* VolumesPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A60CC01BCF548800FD3D27 /* VolumesPanelController.h */; settings = {ASSET_TAGS = (); }; };
+		19A60CC31BCF548800FD3D27 /* VolumesPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A60CC11BCF548800FD3D27 /* VolumesPanelController.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
+		19A60CC41BCF5A7600FD3D27 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F6C520754B21800951B41 /* Preferences.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
+		19A60CC51BCF5ABE00FD3D27 /* PrefsPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37D88E075A561700209C78 /* PrefsPanelController.m */; settings = {ASSET_TAGS = (); }; };
+		19B552FF1BCED169005DEC3B /* CocoatechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B552FC1BCED14F005DEC3B /* CocoatechCore.framework */; };
+		19B553001BCED169005DEC3B /* CocoatechFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B552FD1BCED14F005DEC3B /* CocoatechFile.framework */; };
+		19B553011BCED169005DEC3B /* CocoaTechStrings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B552FE1BCED14F005DEC3B /* CocoaTechStrings.framework */; };
+		19B553021BCED172005DEC3B /* CocoatechCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19B552FC1BCED14F005DEC3B /* CocoatechCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19B553031BCED172005DEC3B /* CocoatechFile.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19B552FD1BCED14F005DEC3B /* CocoatechFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19B553041BCED172005DEC3B /* CocoaTechStrings.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19B552FE1BCED14F005DEC3B /* CocoaTechStrings.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19CB21181BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB210E1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.h */; settings = {ASSET_TAGS = (); }; };
-		19CB21191BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB210F1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.m */; settings = {ASSET_TAGS = (); }; };
 		19CB211A1BCCE6B800233107 /* TMVCushionRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB21101BCCE6B800233107 /* TMVCushionRenderer.h */; settings = {ASSET_TAGS = (); }; };
-		19CB211B1BCCE6B800233107 /* TMVCushionRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB21111BCCE6B800233107 /* TMVCushionRenderer.m */; settings = {ASSET_TAGS = (); }; };
 		19CB211C1BCCE6B800233107 /* TMVItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB21121BCCE6B800233107 /* TMVItem.h */; settings = {ASSET_TAGS = (); }; };
-		19CB211D1BCCE6B800233107 /* TMVItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB21131BCCE6B800233107 /* TMVItem.m */; settings = {ASSET_TAGS = (); }; };
 		19CB211E1BCCE6B800233107 /* TreeMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB21141BCCE6B800233107 /* TreeMapView.h */; settings = {ASSET_TAGS = (); }; };
-		19CB211F1BCCE6B800233107 /* TreeMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB21151BCCE6B800233107 /* TreeMapView.m */; settings = {ASSET_TAGS = (); }; };
 		19CB21201BCCE6B800233107 /* ZoomInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CB21161BCCE6B800233107 /* ZoomInfo.h */; settings = {ASSET_TAGS = (); }; };
-		19CB21211BCCE6B800233107 /* ZoomInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CB21171BCCE6B800233107 /* ZoomInfo.m */; settings = {ASSET_TAGS = (); }; };
 		8D15AC290486D014006FF6A4 /* DiskInventoryX_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF750370BD2300C91783 /* DiskInventoryX_Prefix.pch */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
-		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		FC0DEA0D07625B230049E191 /* DIXFileInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0DEA0B07625B230049E191 /* DIXFileInfoView.h */; };
-		FC0DEA0E07625B230049E191 /* DIXFileInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0DEA0C07625B230049E191 /* DIXFileInfoView.m */; };
 		FC0DFD0207634AC60049E191 /* DonationPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0DFD0007634AC60049E191 /* DonationPanel.xib */; };
-		FC15C814073F85EC0013F5B2 /* VolumeNameTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = FC15C812073F85EC0013F5B2 /* VolumeNameTransformer.h */; };
-		FC15C815073F85EC0013F5B2 /* VolumeNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC15C813073F85EC0013F5B2 /* VolumeNameTransformer.m */; };
 		FC1B8FB3060B28420092839A /* feature suggestions.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC1B8FB2060B28420092839A /* feature suggestions.txt */; };
 		FC1B8FBB060B28CB0092839A /* known bugs.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC1B8FBA060B28CB0092839A /* known bugs.txt */; };
-		FC26D09707F4326E00301D86 /* GenericArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26D09507F4326E00301D86 /* GenericArrayController.m */; };
 		FC26D09807F4326E00301D86 /* GenericArrayController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC26D09607F4326E00301D86 /* GenericArrayController.h */; };
 		FC26D1F307F4559B00301D86 /* FileSizeTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = FC26D1F107F4559B00301D86 /* FileSizeTransformer.h */; };
-		FC26D1F407F4559B00301D86 /* FileSizeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26D1F207F4559B00301D86 /* FileSizeTransformer.m */; };
 		FC26D54107F48B1300301D86 /* SelectionListTableController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC26D53F07F48B1300301D86 /* SelectionListTableController.h */; };
-		FC26D54207F48B1300301D86 /* SelectionListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26D54007F48B1300301D86 /* SelectionListTableController.m */; };
 		FC27C272080728D90073CDF9 /* NTFileDesc-Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = FC27C270080728D90073CDF9 /* NTFileDesc-Utilities.h */; };
-		FC27C273080728D90073CDF9 /* NTFileDesc-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FC27C271080728D90073CDF9 /* NTFileDesc-Utilities.m */; };
-		FC2FB2C10744E0C500D2B466 /* VolumeUsageTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = FC2FB2BF0744E0C500D2B466 /* VolumeUsageTransformer.h */; };
-		FC2FB2C20744E0C500D2B466 /* VolumeUsageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2FB2C00744E0C500D2B466 /* VolumeUsageTransformer.m */; };
 		FC3112D90805853200075F08 /* FinderCMPreferencesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3112D70805853200075F08 /* FinderCMPreferencesPage.xib */; };
 		FC3112E20805857B00075F08 /* FinderCMPrefPage.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3112E00805857B00075F08 /* FinderCMPrefPage.h */; };
-		FC3112E30805857B00075F08 /* FinderCMPrefPage.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3112E10805857B00075F08 /* FinderCMPrefPage.m */; };
 		FC37D62D075904E200209C78 /* TreeMapPreferencesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC37D62B075904E200209C78 /* TreeMapPreferencesPage.xib */; };
 		FC37D63A075905CA00209C78 /* TreeMapPrefPage.h in Headers */ = {isa = PBXBuildFile; fileRef = FC37D638075905CA00209C78 /* TreeMapPrefPage.h */; };
-		FC37D63B075905CA00209C78 /* TreeMapPrefPage.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37D639075905CA00209C78 /* TreeMapPrefPage.m */; };
 		FC37D66B0759084600209C78 /* TreeMapPreferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FC37D66A0759084600209C78 /* TreeMapPreferences.tiff */; };
 		FC37D69F0759096600209C78 /* Preferences.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC37D69E0759096600209C78 /* Preferences.strings */; };
 		FC37D88F075A561700209C78 /* PrefsPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC37D88D075A561700209C78 /* PrefsPanelController.h */; };
-		FC37D890075A561700209C78 /* PrefsPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37D88E075A561700209C78 /* PrefsPanelController.m */; };
 		FC37DADB075B407B00209C78 /* PrefsPageBase.h in Headers */ = {isa = PBXBuildFile; fileRef = FC37DAD9075B407B00209C78 /* PrefsPageBase.h */; };
-		FC37DADC075B407B00209C78 /* PrefsPageBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37DADA075B407B00209C78 /* PrefsPageBase.m */; };
 		FC3FFAD9071074ED004BEC56 /* NTFileDesc-AccessExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3FFAD7071074ED004BEC56 /* NTFileDesc-AccessExtensions.h */; };
-		FC3FFADA071074ED004BEC56 /* NTFileDesc-AccessExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FFAD8071074ED004BEC56 /* NTFileDesc-AccessExtensions.m */; };
-		FC528433075FD35200374589 /* CocoaTechFoundation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC570184070602110032DFE9 /* CocoaTechFoundation.framework */; };
 		FC528AC7076079B500374589 /* LoadingPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC528AC5076079B500374589 /* LoadingPanelController.h */; };
-		FC528AC8076079B500374589 /* LoadingPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC528AC6076079B500374589 /* LoadingPanelController.m */; };
-		FC528C0F0760958C00374589 /* TreeMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC528C0E0760958C00374589 /* TreeMapView.framework */; };
 		FC528C240760962100374589 /* MoveToTrash.png in Resources */ = {isa = PBXBuildFile; fileRef = FC528C230760962100374589 /* MoveToTrash.png */; };
-		FC528F5007609F0300374589 /* TreeMapView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC528C0E0760958C00374589 /* TreeMapView.framework */; };
 		FC55B556073C281600B59D00 /* VolumesPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC55B554073C281600B59D00 /* VolumesPanel.xib */; };
 		FC5700F2070601AE0032DFE9 /* OmniAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5700EF070601AE0032DFE9 /* OmniAppKit.framework */; };
 		FC5700F3070601AE0032DFE9 /* OmniBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5700F0070601AE0032DFE9 /* OmniBase.framework */; };
 		FC5700F4070601AE0032DFE9 /* OmniFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5700F1070601AE0032DFE9 /* OmniFoundation.framework */; };
-		FC570187070602110032DFE9 /* CocoaTechBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC570183070602110032DFE9 /* CocoaTechBase.framework */; };
-		FC570188070602110032DFE9 /* CocoaTechFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC570184070602110032DFE9 /* CocoaTechFoundation.framework */; };
-		FC570189070602110032DFE9 /* CocoaTechID3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC570185070602110032DFE9 /* CocoaTechID3.framework */; };
-		FC57018A070602110032DFE9 /* CocoaTechStrings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC570186070602110032DFE9 /* CocoaTechStrings.framework */; };
-		FC5703A80706023D0032DFE9 /* CocoaTechBase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC570183070602110032DFE9 /* CocoaTechBase.framework */; };
-		FC5703AA0706023D0032DFE9 /* CocoaTechID3.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC570185070602110032DFE9 /* CocoaTechID3.framework */; };
-		FC5703AB0706023D0032DFE9 /* CocoaTechStrings.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC570186070602110032DFE9 /* CocoaTechStrings.framework */; };
 		FC5703AC0706023D0032DFE9 /* OmniAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC5700EF070601AE0032DFE9 /* OmniAppKit.framework */; };
 		FC5703AD0706023D0032DFE9 /* OmniBase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC5700F0070601AE0032DFE9 /* OmniBase.framework */; };
 		FC5703AE0706023D0032DFE9 /* OmniFoundation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC5700F1070601AE0032DFE9 /* OmniFoundation.framework */; };
@@ -80,72 +62,45 @@
 		FC6575C0075F7A210056F438 /* ShowPackageContentsClosed.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6575BE075F7A210056F438 /* ShowPackageContentsClosed.png */; };
 		FC6575C1075F7A210056F438 /* ShowPackageContentsOpen.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6575BF075F7A210056F438 /* ShowPackageContentsOpen.png */; };
 		FC6ADCCA07F99934006FE39B /* NSOutlineView-ContextMenuExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6ADCC807F99934006FE39B /* NSOutlineView-ContextMenuExtension.h */; };
-		FC6ADCCB07F99934006FE39B /* NSOutlineView-ContextMenuExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADCC907F99934006FE39B /* NSOutlineView-ContextMenuExtension.m */; };
 		FC6C55110577E62900DD1CE6 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FC6C55100577E62900DD1CE6 /* AppIcon.icns */; };
 		FC6D4B230804040600E21F6D /* DIXFinderCMInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6D4B210804040600E21F6D /* DIXFinderCMInstaller.h */; };
-		FC6D4B240804040600E21F6D /* DIXFinderCMInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6D4B220804040600E21F6D /* DIXFinderCMInstaller.m */; };
-		FC6D4C0D080416BC00E21F6D /* Disk Inventory X Finder CM.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC6D4C00080414C200E21F6D /* Disk Inventory X Finder CM.plugin */; };
 		FC6DE9FF07FBE44A00581F63 /* FileKindsPopupController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6DE9FD07FBE44A00581F63 /* FileKindsPopupController.h */; };
-		FC6DEA0007FBE44A00581F63 /* FileKindsPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6DE9FE07FBE44A00581F63 /* FileKindsPopupController.m */; };
 		FC6DEA7007FBED8C00581F63 /* SelectionListController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6DEA6E07FBED8C00581F63 /* SelectionListController.h */; };
-		FC6DEA7107FBED8C00581F63 /* SelectionListController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6DEA6F07FBED8C00581F63 /* SelectionListController.m */; };
 		FC6E8D820758EE3F00500E6F /* GeneralPrefPage.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6E8D800758EE3F00500E6F /* GeneralPrefPage.h */; };
-		FC6E8D830758EE3F00500E6F /* GeneralPrefPage.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6E8D810758EE3F00500E6F /* GeneralPrefPage.m */; };
 		FC6E8DA10758EF0300500E6F /* GeneralPreferencesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6E8D9F0758EF0300500E6F /* GeneralPreferencesPage.xib */; };
 		FC6E8DCF0758F1EA00500E6F /* GeneralPreferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FC6E8DCE0758F1EA00500E6F /* GeneralPreferences.tiff */; };
-		FC755279054C3BFF00BBC68D /* TreeMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC75525D054C3BFF00BBC68D /* TreeMapViewController.m */; };
 		FC75527A054C3BFF00BBC68D /* TreeMapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC75525E054C3BFF00BBC68D /* TreeMapViewController.h */; };
-		FC755281054C3BFF00BBC68D /* OffscreenGWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = FC755265054C3BFF00BBC68D /* OffscreenGWorld.m */; };
 		FC755282054C3BFF00BBC68D /* OffscreenGWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = FC755266054C3BFF00BBC68D /* OffscreenGWorld.h */; };
 		FC755285054C3BFF00BBC68D /* MyDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC755269054C3BFF00BBC68D /* MyDocumentController.m */; };
 		FC755286054C3BFF00BBC68D /* MyDocumentController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC75526A054C3BFF00BBC68D /* MyDocumentController.h */; };
-		FC755287054C3BFF00BBC68D /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC75526B054C3BFF00BBC68D /* MainWindowController.m */; };
 		FC755288054C3BFF00BBC68D /* MainWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC75526C054C3BFF00BBC68D /* MainWindowController.h */; };
-		FC755289054C3BFF00BBC68D /* ImageAndTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC75526D054C3BFF00BBC68D /* ImageAndTextCell.m */; };
 		FC75528A054C3BFF00BBC68D /* ImageAndTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = FC75526E054C3BFF00BBC68D /* ImageAndTextCell.h */; };
-		FC75528B054C3BFF00BBC68D /* FSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC75526F054C3BFF00BBC68D /* FSItem.m */; };
 		FC75528C054C3BFF00BBC68D /* FSItem.h in Headers */ = {isa = PBXBuildFile; fileRef = FC755270054C3BFF00BBC68D /* FSItem.h */; };
-		FC75528D054C3BFF00BBC68D /* FileTypeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FC755271054C3BFF00BBC68D /* FileTypeColors.m */; };
 		FC75528E054C3BFF00BBC68D /* FileTypeColors.h in Headers */ = {isa = PBXBuildFile; fileRef = FC755272054C3BFF00BBC68D /* FileTypeColors.h */; };
-		FC75528F054C3BFF00BBC68D /* FileSystemDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = FC755273054C3BFF00BBC68D /* FileSystemDoc.m */; };
 		FC755290054C3BFF00BBC68D /* FileSystemDoc.h in Headers */ = {isa = PBXBuildFile; fileRef = FC755274054C3BFF00BBC68D /* FileSystemDoc.h */; };
-		FC755291054C3BFF00BBC68D /* FilesOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC755275054C3BFF00BBC68D /* FilesOutlineViewController.m */; };
 		FC755292054C3BFF00BBC68D /* FilesOutlineViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC755276054C3BFF00BBC68D /* FilesOutlineViewController.h */; };
-		FC755293054C3BFF00BBC68D /* FileKindsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC755277054C3BFF00BBC68D /* FileKindsTableController.m */; };
 		FC755294054C3BFF00BBC68D /* FileKindsTableController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC755278054C3BFF00BBC68D /* FileKindsTableController.h */; };
 		FC75529D054C3C2900BBC68D /* TreeMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC755297054C3C2900BBC68D /* TreeMap.xib */; };
 		FC75529E054C3C2900BBC68D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC755299054C3C2900BBC68D /* MainMenu.xib */; };
 		FC75529F054C3C2900BBC68D /* LoadingPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC75529B054C3C2900BBC68D /* LoadingPanel.xib */; };
 		FC79EEAD07FC3822000BEBFA /* NSTableViewWithContextMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = FC79EEAB07FC3822000BEBFA /* NSTableViewWithContextMenu.h */; };
-		FC79EEAE07FC3822000BEBFA /* NSTableViewWithContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FC79EEAC07FC3822000BEBFA /* NSTableViewWithContextMenu.m */; };
 		FC79F14A07FD45A4000BEBFA /* FSItemIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = FC79F14807FD45A4000BEBFA /* FSItemIndex.h */; };
-		FC79F14B07FD45A4000BEBFA /* FSItemIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = FC79F14907FD45A4000BEBFA /* FSItemIndex.m */; };
-		FC84CA670748EF9300E252C8 /* DrivesPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC84CA650748EF9300E252C8 /* DrivesPanelController.h */; };
-		FC84CA680748EF9300E252C8 /* DrivesPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC84CA660748EF9300E252C8 /* DrivesPanelController.m */; };
 		FC84D049074A3E2200E252C8 /* InfoPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC84D047074A3E2200E252C8 /* InfoPanelController.h */; };
-		FC84D04A074A3E2200E252C8 /* InfoPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC84D048074A3E2200E252C8 /* InfoPanelController.m */; };
 		FC84D061074A3F4900E252C8 /* InfoPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC84D05F074A3F4900E252C8 /* InfoPanel.xib */; };
 		FC84DC9A074D4B0800E252C8 /* NTDefaultDirectory-Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = FC84DC98074D4B0800E252C8 /* NTDefaultDirectory-Utilities.h */; };
-		FC84DC9B074D4B0800E252C8 /* NTDefaultDirectory-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FC84DC99074D4B0800E252C8 /* NTDefaultDirectory-Utilities.m */; };
 		FC84DD66074D61EF00E252C8 /* FSItem-Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = FC84DD64074D61EF00E252C8 /* FSItem-Utilities.h */; };
-		FC84DD67074D61EF00E252C8 /* FSItem-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FC84DD65074D61EF00E252C8 /* FSItem-Utilities.m */; };
 		FC9E03B706087FB800F892E5 /* release notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9E03B606087FB800F892E5 /* release notes.txt */; };
 		FC9F6B530754947B00951B41 /* Preferences.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9F6B520754947B00951B41 /* Preferences.h */; };
-		FC9F6C530754B21800951B41 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F6C520754B21800951B41 /* Preferences.m */; };
 		FCA4C2B5075B67940064125F /* NTFSRefObject-AccessExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA4C2B3075B67940064125F /* NTFSRefObject-AccessExtensions.h */; };
-		FCA4C2B6075B67940064125F /* NTFSRefObject-AccessExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA4C2B4075B67940064125F /* NTFSRefObject-AccessExtensions.m */; };
 		FCA4CFDD075DC6E10064125F /* MainWindowToolbar.toolbar in Resources */ = {isa = PBXBuildFile; fileRef = FCA4CFDC075DC6E10064125F /* MainWindowToolbar.toolbar */; };
 		FCA4D13B075DE2490064125F /* ZoomOut.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FCA4D139075DE2490064125F /* ZoomOut.tiff */; };
 		FCA4D13C075DE24A0064125F /* ZoomIn.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FCA4D13A075DE2490064125F /* ZoomIn.tiff */; };
 		FCA4D149075DE2780064125F /* KindsStatisticDrawer.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FCA4D148075DE2780064125F /* KindsStatisticDrawer.tiff */; };
 		FCA4D3FF075E15630064125F /* OAToolbarWindowControllerEx.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA4D3FD075E15630064125F /* OAToolbarWindowControllerEx.h */; };
-		FCA4D400075E15630064125F /* OAToolbarWindowControllerEx.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA4D3FE075E15630064125F /* OAToolbarWindowControllerEx.m */; };
 		FCA4D604075E6D7E0064125F /* Inspector.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FCA4D603075E6D7E0064125F /* Inspector.tiff */; };
 		FCAC0D330607189700B74E7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCAC0D310607189700B74E7D /* Localizable.strings */; };
-		FCB62FEF070CAE5F00BA5FD4 /* Timing.c in Sources */ = {isa = PBXBuildFile; fileRef = FCB62FED070CAE5F00BA5FD4 /* Timing.c */; };
 		FCB62FF0070CAE5F00BA5FD4 /* Timing.h in Headers */ = {isa = PBXBuildFile; fileRef = FCB62FEE070CAE5F00BA5FD4 /* Timing.h */; };
 		FCC564780615EA5E00C5884D /* FileSizeFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC564760615EA5E00C5884D /* FileSizeFormatter.h */; };
-		FCC564790615EA5E00C5884D /* FileSizeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC564770615EA5E00C5884D /* FileSizeFormatter.m */; };
 		FCE5D6580806A2CC00BDB57A /* FinderCMPreferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FCE5D6570806A2CC00BDB57A /* FinderCMPreferences.tiff */; };
 		FCEC79A90768556E008895C2 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = FCEC799F0768556E008895C2 /* Help */; };
 /* End PBXBuildFile section */
@@ -167,14 +122,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FC528F5007609F0300374589 /* TreeMapView.framework in CopyFiles */,
-				FC5703A80706023D0032DFE9 /* CocoaTechBase.framework in CopyFiles */,
-				FC528433075FD35200374589 /* CocoaTechFoundation.framework in CopyFiles */,
-				FC5703AA0706023D0032DFE9 /* CocoaTechID3.framework in CopyFiles */,
-				FC5703AB0706023D0032DFE9 /* CocoaTechStrings.framework in CopyFiles */,
 				FC5703AC0706023D0032DFE9 /* OmniAppKit.framework in CopyFiles */,
 				FC5703AD0706023D0032DFE9 /* OmniBase.framework in CopyFiles */,
 				FC5703AE0706023D0032DFE9 /* OmniFoundation.framework in CopyFiles */,
+				19B553021BCED172005DEC3B /* CocoatechCore.framework in CopyFiles */,
+				19B553031BCED172005DEC3B /* CocoatechFile.framework in CopyFiles */,
+				19B553041BCED172005DEC3B /* CocoaTechStrings.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +137,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				FC6D4C0D080416BC00E21F6D /* Disk Inventory X Finder CM.plugin in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +145,13 @@
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		19A60BB01BCF36D300FD3D27 /* Volume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volume.h; sourceTree = "<group>"; };
+		19A60BB11BCF36D300FD3D27 /* Volume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volume.m; sourceTree = "<group>"; };
+		19A60CC01BCF548800FD3D27 /* VolumesPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumesPanelController.h; sourceTree = "<group>"; };
+		19A60CC11BCF548800FD3D27 /* VolumesPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumesPanelController.m; sourceTree = "<group>"; };
+		19B552FC1BCED14F005DEC3B /* CocoatechCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoatechCore.framework; sourceTree = "<group>"; };
+		19B552FD1BCED14F005DEC3B /* CocoatechFile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoatechFile.framework; sourceTree = "<group>"; };
+		19B552FE1BCED14F005DEC3B /* CocoaTechStrings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaTechStrings.framework; sourceTree = "<group>"; };
 		19CB210E1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBitmapImageRep-CreationExtensions.h"; sourceTree = "<group>"; };
 		19CB210F1BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBitmapImageRep-CreationExtensions.m"; sourceTree = "<group>"; };
 		19CB21101BCCE6B800233107 /* TMVCushionRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMVCushionRenderer.h; sourceTree = "<group>"; };
@@ -213,8 +172,6 @@
 		FC0DEA0B07625B230049E191 /* DIXFileInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIXFileInfoView.h; sourceTree = "<group>"; };
 		FC0DEA0C07625B230049E191 /* DIXFileInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIXFileInfoView.m; sourceTree = "<group>"; };
 		FC0DFD0107634AC60049E191 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/DonationPanel.xib; sourceTree = "<group>"; };
-		FC15C812073F85EC0013F5B2 /* VolumeNameTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeNameTransformer.h; sourceTree = "<group>"; };
-		FC15C813073F85EC0013F5B2 /* VolumeNameTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeNameTransformer.m; sourceTree = "<group>"; };
 		FC1B8FB2060B28420092839A /* feature suggestions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "feature suggestions.txt"; sourceTree = "<group>"; };
 		FC1B8FBA060B28CB0092839A /* known bugs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "known bugs.txt"; sourceTree = "<group>"; };
 		FC26D09507F4326E00301D86 /* GenericArrayController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GenericArrayController.m; sourceTree = "<group>"; };
@@ -226,8 +183,6 @@
 		FC2788E007D7571C00EDCC97 /* TreeMapView.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TreeMapView.xcode; path = Frameworks/TreeMapView.xcode; sourceTree = SOURCE_ROOT; };
 		FC27C270080728D90073CDF9 /* NTFileDesc-Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTFileDesc-Utilities.h"; sourceTree = "<group>"; };
 		FC27C271080728D90073CDF9 /* NTFileDesc-Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTFileDesc-Utilities.m"; sourceTree = "<group>"; };
-		FC2FB2BF0744E0C500D2B466 /* VolumeUsageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VolumeUsageTransformer.h; sourceTree = "<group>"; };
-		FC2FB2C00744E0C500D2B466 /* VolumeUsageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VolumeUsageTransformer.m; sourceTree = "<group>"; };
 		FC3112D80805853200075F08 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/FinderCMPreferencesPage.xib; sourceTree = "<group>"; };
 		FC3112E00805857B00075F08 /* FinderCMPrefPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderCMPrefPage.h; sourceTree = "<group>"; };
 		FC3112E10805857B00075F08 /* FinderCMPrefPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderCMPrefPage.m; sourceTree = "<group>"; };
@@ -244,16 +199,11 @@
 		FC3FFAD8071074ED004BEC56 /* NTFileDesc-AccessExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTFileDesc-AccessExtensions.m"; sourceTree = "<group>"; };
 		FC528AC5076079B500374589 /* LoadingPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingPanelController.h; sourceTree = "<group>"; };
 		FC528AC6076079B500374589 /* LoadingPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingPanelController.m; sourceTree = "<group>"; };
-		FC528C0E0760958C00374589 /* TreeMapView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TreeMapView.framework; path = Frameworks/TreeMapView.framework; sourceTree = SOURCE_ROOT; };
 		FC528C230760962100374589 /* MoveToTrash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MoveToTrash.png; sourceTree = "<group>"; };
 		FC55B555073C281600B59D00 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/VolumesPanel.xib; sourceTree = "<group>"; };
-		FC5700EF070601AE0032DFE9 /* OmniAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OmniAppKit.framework; path = "Frameworks/OmniAppKit.framework"; sourceTree = SOURCE_ROOT; };
-		FC5700F0070601AE0032DFE9 /* OmniBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OmniBase.framework; path = "Frameworks/OmniBase.framework"; sourceTree = SOURCE_ROOT; };
-		FC5700F1070601AE0032DFE9 /* OmniFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OmniFoundation.framework; path = "Frameworks/OmniFoundation.framework"; sourceTree = SOURCE_ROOT; };
-		FC570183070602110032DFE9 /* CocoaTechBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaTechBase.framework; path = Frameworks/CocoaTechBase.framework; sourceTree = SOURCE_ROOT; };
-		FC570184070602110032DFE9 /* CocoaTechFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaTechFoundation.framework; path = Frameworks/CocoaTechFoundation.framework; sourceTree = SOURCE_ROOT; };
-		FC570185070602110032DFE9 /* CocoaTechID3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaTechID3.framework; path = Frameworks/CocoaTechID3.framework; sourceTree = SOURCE_ROOT; };
-		FC570186070602110032DFE9 /* CocoaTechStrings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaTechStrings.framework; path = Frameworks/CocoaTechStrings.framework; sourceTree = SOURCE_ROOT; };
+		FC5700EF070601AE0032DFE9 /* OmniAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OmniAppKit.framework; sourceTree = "<group>"; };
+		FC5700F0070601AE0032DFE9 /* OmniBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OmniBase.framework; sourceTree = "<group>"; };
+		FC5700F1070601AE0032DFE9 /* OmniFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OmniFoundation.framework; sourceTree = "<group>"; };
 		FC657546075F4D2E0056F438 /* Preferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Preferences.tiff; sourceTree = "<group>"; };
 		FC657584075F58C90056F438 /* RefreshSelection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RefreshSelection.png; sourceTree = "<group>"; };
 		FC657585075F58C90056F438 /* RefreshAll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RefreshAll.png; sourceTree = "<group>"; };
@@ -301,8 +251,6 @@
 		FC79EEAC07FC3822000BEBFA /* NSTableViewWithContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTableViewWithContextMenu.m; sourceTree = "<group>"; };
 		FC79F14807FD45A4000BEBFA /* FSItemIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSItemIndex.h; sourceTree = "<group>"; };
 		FC79F14907FD45A4000BEBFA /* FSItemIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSItemIndex.m; sourceTree = "<group>"; };
-		FC84CA650748EF9300E252C8 /* DrivesPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrivesPanelController.h; sourceTree = "<group>"; };
-		FC84CA660748EF9300E252C8 /* DrivesPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrivesPanelController.m; sourceTree = "<group>"; };
 		FC84D047074A3E2200E252C8 /* InfoPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPanelController.h; sourceTree = "<group>"; };
 		FC84D048074A3E2200E252C8 /* InfoPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPanelController.m; sourceTree = "<group>"; };
 		FC84D060074A3F4900E252C8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/InfoPanel.xib; sourceTree = "<group>"; };
@@ -340,11 +288,9 @@
 				FC5700F2070601AE0032DFE9 /* OmniAppKit.framework in Frameworks */,
 				FC5700F3070601AE0032DFE9 /* OmniBase.framework in Frameworks */,
 				FC5700F4070601AE0032DFE9 /* OmniFoundation.framework in Frameworks */,
-				FC570187070602110032DFE9 /* CocoaTechBase.framework in Frameworks */,
-				FC570188070602110032DFE9 /* CocoaTechFoundation.framework in Frameworks */,
-				FC570189070602110032DFE9 /* CocoaTechID3.framework in Frameworks */,
-				FC57018A070602110032DFE9 /* CocoaTechStrings.framework in Frameworks */,
-				FC528C0F0760958C00374589 /* TreeMapView.framework in Frameworks */,
+				19B552FF1BCED169005DEC3B /* CocoatechCore.framework in Frameworks */,
+				19B553001BCED169005DEC3B /* CocoatechFile.framework in Frameworks */,
+				19B553011BCED169005DEC3B /* CocoaTechStrings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +333,7 @@
 				FCBEF4D7054C3F4C007ABD71 /* Helper Classes */,
 				FC84D044074A3E0700E252C8 /* InfoPanel */,
 				FC26D53C07F48AC600301D86 /* SelectionList */,
-				FC1A6382073AB5F3007ED7C0 /* DrivesPanel */,
+				FC1A6382073AB5F3007ED7C0 /* VolumesPanel */,
 				FCBEF4D4054C3F30007ABD71 /* TreeMapView Classes */,
 				FCBEF4D1054C3F14007ABD71 /* FileKindsTableView Classes */,
 				FCBEF4CA054C3EC5007ABD71 /* FilesOutlineView Classes */,
@@ -444,7 +390,6 @@
 				FC657550075F4D450056F438 /* Toolbar */,
 				FC6E8D840758EE4600500E6F /* Preferences */,
 				FC84D05F074A3F4900E252C8 /* InfoPanel.xib */,
-				FC55B554073C281600B59D00 /* VolumesPanel.xib */,
 				FC755297054C3C2900BBC68D /* TreeMap.xib */,
 				FC755299054C3C2900BBC68D /* MainMenu.xib */,
 				FC75529B054C3C2900BBC68D /* LoadingPanel.xib */,
@@ -462,31 +407,28 @@
 		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FC528C0E0760958C00374589 /* TreeMapView.framework */,
-				FC570183070602110032DFE9 /* CocoaTechBase.framework */,
-				FC570184070602110032DFE9 /* CocoaTechFoundation.framework */,
-				FC570185070602110032DFE9 /* CocoaTechID3.framework */,
-				FC570186070602110032DFE9 /* CocoaTechStrings.framework */,
+				19B552FC1BCED14F005DEC3B /* CocoatechCore.framework */,
+				19B552FD1BCED14F005DEC3B /* CocoatechFile.framework */,
+				19B552FE1BCED14F005DEC3B /* CocoaTechStrings.framework */,
 				FC5700EF070601AE0032DFE9 /* OmniAppKit.framework */,
 				FC5700F0070601AE0032DFE9 /* OmniBase.framework */,
 				FC5700F1070601AE0032DFE9 /* OmniFoundation.framework */,
 				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
 				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
 			);
-			name = Frameworks;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		FC1A6382073AB5F3007ED7C0 /* DrivesPanel */ = {
+		FC1A6382073AB5F3007ED7C0 /* VolumesPanel */ = {
 			isa = PBXGroup;
 			children = (
-				FC84CA650748EF9300E252C8 /* DrivesPanelController.h */,
-				FC84CA660748EF9300E252C8 /* DrivesPanelController.m */,
-				FC15C812073F85EC0013F5B2 /* VolumeNameTransformer.h */,
-				FC15C813073F85EC0013F5B2 /* VolumeNameTransformer.m */,
-				FC2FB2BF0744E0C500D2B466 /* VolumeUsageTransformer.h */,
-				FC2FB2C00744E0C500D2B466 /* VolumeUsageTransformer.m */,
+				19A60BB01BCF36D300FD3D27 /* Volume.h */,
+				19A60BB11BCF36D300FD3D27 /* Volume.m */,
+				19A60CC01BCF548800FD3D27 /* VolumesPanelController.h */,
+				19A60CC11BCF548800FD3D27 /* VolumesPanelController.m */,
+				FC55B554073C281600B59D00 /* VolumesPanel.xib */,
 			);
-			name = DrivesPanel;
+			name = VolumesPanel;
 			path = DiskInventoryX/Source;
 			sourceTree = "<group>";
 		};
@@ -703,6 +645,7 @@
 				19CB211A1BCCE6B800233107 /* TMVCushionRenderer.h in Headers */,
 				FC75528A054C3BFF00BBC68D /* ImageAndTextCell.h in Headers */,
 				FC75528C054C3BFF00BBC68D /* FSItem.h in Headers */,
+				19A60CC21BCF548800FD3D27 /* VolumesPanelController.h in Headers */,
 				FC75528E054C3BFF00BBC68D /* FileTypeColors.h in Headers */,
 				FC755290054C3BFF00BBC68D /* FileSystemDoc.h in Headers */,
 				19CB211C1BCCE6B800233107 /* TMVItem.h in Headers */,
@@ -711,9 +654,7 @@
 				FCC564780615EA5E00C5884D /* FileSizeFormatter.h in Headers */,
 				FCB62FF0070CAE5F00BA5FD4 /* Timing.h in Headers */,
 				FC3FFAD9071074ED004BEC56 /* NTFileDesc-AccessExtensions.h in Headers */,
-				FC15C814073F85EC0013F5B2 /* VolumeNameTransformer.h in Headers */,
-				FC2FB2C10744E0C500D2B466 /* VolumeUsageTransformer.h in Headers */,
-				FC84CA670748EF9300E252C8 /* DrivesPanelController.h in Headers */,
+				19A60BB21BCF36D300FD3D27 /* Volume.h in Headers */,
 				FC84D049074A3E2200E252C8 /* InfoPanelController.h in Headers */,
 				FC84DC9A074D4B0800E252C8 /* NTDefaultDirectory-Utilities.h in Headers */,
 				FC84DD66074D61EF00E252C8 /* FSItem-Utilities.h in Headers */,
@@ -872,50 +813,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
-				FC755279054C3BFF00BBC68D /* TreeMapViewController.m in Sources */,
-				FC755281054C3BFF00BBC68D /* OffscreenGWorld.m in Sources */,
+				19A60BB31BCF36D300FD3D27 /* Volume.m in Sources */,
+				19A60CC31BCF548800FD3D27 /* VolumesPanelController.m in Sources */,
+				19A60CC51BCF5ABE00FD3D27 /* PrefsPanelController.m in Sources */,
 				FC755285054C3BFF00BBC68D /* MyDocumentController.m in Sources */,
-				FC755287054C3BFF00BBC68D /* MainWindowController.m in Sources */,
-				FC755289054C3BFF00BBC68D /* ImageAndTextCell.m in Sources */,
-				FC75528B054C3BFF00BBC68D /* FSItem.m in Sources */,
-				FC75528D054C3BFF00BBC68D /* FileTypeColors.m in Sources */,
-				FC75528F054C3BFF00BBC68D /* FileSystemDoc.m in Sources */,
-				FC755291054C3BFF00BBC68D /* FilesOutlineViewController.m in Sources */,
-				FC755293054C3BFF00BBC68D /* FileKindsTableController.m in Sources */,
-				FCC564790615EA5E00C5884D /* FileSizeFormatter.m in Sources */,
-				FCB62FEF070CAE5F00BA5FD4 /* Timing.c in Sources */,
-				FC3FFADA071074ED004BEC56 /* NTFileDesc-AccessExtensions.m in Sources */,
-				FC15C815073F85EC0013F5B2 /* VolumeNameTransformer.m in Sources */,
-				FC2FB2C20744E0C500D2B466 /* VolumeUsageTransformer.m in Sources */,
-				FC84CA680748EF9300E252C8 /* DrivesPanelController.m in Sources */,
-				FC84D04A074A3E2200E252C8 /* InfoPanelController.m in Sources */,
-				FC84DC9B074D4B0800E252C8 /* NTDefaultDirectory-Utilities.m in Sources */,
-				FC84DD67074D61EF00E252C8 /* FSItem-Utilities.m in Sources */,
-				FC9F6C530754B21800951B41 /* Preferences.m in Sources */,
-				FC6E8D830758EE3F00500E6F /* GeneralPrefPage.m in Sources */,
-				FC37D63B075905CA00209C78 /* TreeMapPrefPage.m in Sources */,
-				FC37D890075A561700209C78 /* PrefsPanelController.m in Sources */,
-				19CB21191BCCE6B800233107 /* NSBitmapImageRep-CreationExtensions.m in Sources */,
-				FC37DADC075B407B00209C78 /* PrefsPageBase.m in Sources */,
-				FCA4C2B6075B67940064125F /* NTFSRefObject-AccessExtensions.m in Sources */,
-				FCA4D400075E15630064125F /* OAToolbarWindowControllerEx.m in Sources */,
-				FC528AC8076079B500374589 /* LoadingPanelController.m in Sources */,
-				19CB211F1BCCE6B800233107 /* TreeMapView.m in Sources */,
-				FC0DEA0E07625B230049E191 /* DIXFileInfoView.m in Sources */,
-				19CB211B1BCCE6B800233107 /* TMVCushionRenderer.m in Sources */,
-				FC26D09707F4326E00301D86 /* GenericArrayController.m in Sources */,
-				FC26D1F407F4559B00301D86 /* FileSizeTransformer.m in Sources */,
-				FC26D54207F48B1300301D86 /* SelectionListTableController.m in Sources */,
-				FC6ADCCB07F99934006FE39B /* NSOutlineView-ContextMenuExtension.m in Sources */,
-				FC6DEA0007FBE44A00581F63 /* FileKindsPopupController.m in Sources */,
-				19CB21211BCCE6B800233107 /* ZoomInfo.m in Sources */,
-				FC6DEA7107FBED8C00581F63 /* SelectionListController.m in Sources */,
-				FC79EEAE07FC3822000BEBFA /* NSTableViewWithContextMenu.m in Sources */,
-				19CB211D1BCCE6B800233107 /* TMVItem.m in Sources */,
-				FC79F14B07FD45A4000BEBFA /* FSItemIndex.m in Sources */,
-				FC6D4B240804040600E21F6D /* DIXFinderCMInstaller.m in Sources */,
-				FC3112E30805857B00075F08 /* FinderCMPrefPage.m in Sources */,
-				FC27C273080728D90073CDF9 /* NTFileDesc-Utilities.m in Sources */,
+				19A60CC41BCF5A7600FD3D27 /* Preferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,7 +881,7 @@
 				FC55B555073C281600B59D00 /* English */,
 			);
 			name = VolumesPanel.xib;
-			path = DiskInventoryX/Resources;
+			path = ../Resources;
 			sourceTree = "<group>";
 		};
 		FC6E8D9F0758EF0300500E6F /* GeneralPreferencesPage.xib */ = {
@@ -1069,6 +971,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DiskInventoryX/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
@@ -1104,6 +1007,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DiskInventoryX/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -1135,6 +1039,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DiskInventoryX/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -1153,21 +1058,21 @@
 		FCA73FF7085C426A00C8726E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
 			name = Debug;
 		};
 		FCA73FF8085C426A00C8726E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
 			name = Release;
 		};
 		FCA73FF9085C426A00C8726E /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
 			name = Default;
 		};

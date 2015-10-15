@@ -6,8 +6,6 @@
 //  Copyright 2005 Tjark Derlien. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
 @interface NTFileDesc(DIXFinderCM)
 
 + (NSString*) DIXFinderCMFileName;

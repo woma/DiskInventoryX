@@ -1,120 +1,182 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1030" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9046"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="DrivesPanelController">
+        <customObject id="-2" userLabel="File's Owner" customClass="VolumesPanelController">
             <connections>
-                <outlet property="_openVolumeButton" destination="196" id="263"/>
-                <outlet property="_volumesController" destination="39" id="269"/>
-                <outlet property="_volumesPanel" destination="5" id="259"/>
-                <outlet property="_volumesTableView" destination="7" id="258"/>
+                <outlet property="volumesController" destination="39" id="Hpg-b2-1EU"/>
+                <outlet property="window" destination="5" id="mvf-lY-2fg"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" frameAutosaveName="DrivesPlanel" animationBehavior="default" id="5" userLabel="Window">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Volumes" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" frameAutosaveName="DrivesPlanel" animationBehavior="default" id="5" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="97" y="354" width="532" height="263"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="832"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" autoresizesSubviews="NO" id="6">
-                <rect key="frame" x="1" y="9" width="532" height="263"/>
+                <rect key="frame" x="0.0" y="0.0" width="532" height="263"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView autohidesScrollers="YES" horizontalLineScroll="47" horizontalPageScroll="10" verticalLineScroll="47" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="9">
-                        <rect key="frame" x="20" y="76" width="492" height="167"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="52" horizontalPageScroll="10" verticalLineScroll="52" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                        <rect key="frame" x="0.0" y="44" width="532" height="219"/>
                         <clipView key="contentView" id="17O-6J-9Yu">
-                            <rect key="frame" x="1" y="1" width="490" height="165"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <rect key="frame" x="1" y="1" width="530" height="217"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView autoresizesSubviews="NO" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" rowHeight="45" id="7">
-                                    <rect key="frame" x="0.0" y="0.0" width="490" height="165"/>
+                                <tableView autoresizesSubviews="NO" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" rowHeight="50" rowSizeStyle="automatic" viewBased="YES" id="7">
+                                    <rect key="frame" x="0.0" y="0.0" width="530" height="217"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn editable="NO" width="50" minWidth="40" maxWidth="1000" id="8">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="icon">
+                                        <tableColumn editable="NO" width="527" minWidth="40" maxWidth="1000" id="8">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableHeaderCell>
                                             <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="146"/>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                            <connections>
-                                                <binding destination="39" name="value" keyPath="arrangedObjects.image" id="149">
-                                                    <dictionary key="options">
-                                                        <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
-                                                    </dictionary>
-                                                </binding>
-                                            </connections>
-                                        </tableColumn>
-                                        <tableColumn editable="NO" width="147" minWidth="40" maxWidth="1000" id="10">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="volume">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
-                                            </tableHeaderCell>
-                                            <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="288">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </textFieldCell>
-                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                            <connections>
-                                                <binding destination="39" name="value" keyPath="arrangedObjects.volume" id="171">
-                                                    <dictionary key="options">
-                                                        <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
-                                                        <string key="NSValueTransformerName">volumeNameTransformer</string>
-                                                    </dictionary>
-                                                </binding>
-                                            </connections>
-                                        </tableColumn>
-                                        <tableColumn identifier="usage" width="126" minWidth="10" maxWidth="1000" id="178">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="usage">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                            </tableHeaderCell>
-                                            <textFieldCell key="dataCell" alignment="right" id="283">
-                                                <font key="font" metaFont="message" size="12"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                            <connections>
-                                                <binding destination="39" name="value" keyPath="arrangedObjects.volume" id="189">
-                                                    <dictionary key="options">
-                                                        <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                                        <bool key="NSConditionallySetsEditable" value="NO"/>
-                                                        <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
-                                                        <string key="NSValueTransformerName">volumeUsageTransformer</string>
-                                                    </dictionary>
-                                                </binding>
-                                            </connections>
-                                        </tableColumn>
-                                        <tableColumn identifier="usagePercent" editable="NO" width="155" minWidth="4" maxWidth="1000" id="11">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="usagePercent">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                            </tableHeaderCell>
-                                            <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="289">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView id="Nyr-id-kyP">
+                                                    <rect key="frame" x="1" y="1" width="527" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dh8-iY-kYO">
+                                                            <rect key="frame" x="220" y="29" width="80" height="17"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Capacity:" id="Ph4-3v-4lb">
+                                                                <font key="font" size="11" name=".HelveticaNeueDeskInterface-Bold"/>
+                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9q-ps-cRA">
+                                                            <rect key="frame" x="305" y="29" width="54" height="17"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0,0 GB" id="6az-XZ-Tdq">
+                                                                <font key="font" size="11" name=".HelveticaNeueDeskInterface-Bold"/>
+                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.totalCapacity" id="Ndx-0j-MBc">
+                                                                    <dictionary key="options">
+                                                                        <string key="NSValueTransformerName">VolumeSizeTransformer</string>
+                                                                    </dictionary>
+                                                                </binding>
+                                                            </connections>
+                                                        </textField>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHe-vy-nhQ">
+                                                            <rect key="frame" x="220" y="15" width="80" height="17"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Used:" id="Evl-xe-zGi">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-33-BCF">
+                                                            <rect key="frame" x="305" y="15" width="54" height="17"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0,0 GB" id="S1P-iS-20A">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.usedCapacity" id="hN7-t7-IWZ">
+                                                                    <dictionary key="options">
+                                                                        <string key="NSValueTransformerName">VolumeSizeTransformer</string>
+                                                                    </dictionary>
+                                                                </binding>
+                                                            </connections>
+                                                        </textField>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4g-oN-dRD">
+                                                            <rect key="frame" x="220" y="1" width="80" height="17"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Free:" id="v56-E2-C4P">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hac-Jt-k1y">
+                                                            <rect key="frame" x="306" y="1" width="54" height="17"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0,0 GB" id="lG8-J9-4CO">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.freeCapacity" id="hDE-Ku-Rzu">
+                                                                    <dictionary key="options">
+                                                                        <string key="NSValueTransformerName">VolumeSizeTransformer</string>
+                                                                    </dictionary>
+                                                                </binding>
+                                                            </connections>
+                                                        </textField>
+                                                        <progressIndicator ambiguous="YES" misplaced="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="8Ow-W0-TGx">
+                                                            <rect key="frame" x="387" y="13" width="120" height="20"/>
+                                                            <connections>
+                                                                <binding destination="Nyr-id-kyP" name="maxValue" keyPath="objectValue.totalCapacity" id="YPA-co-88Q"/>
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.usedCapacity" previousBinding="YPA-co-88Q" id="svd-HJ-om2"/>
+                                                            </connections>
+                                                        </progressIndicator>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7hp-2c-tf1">
+                                                            <rect key="frame" x="66" y="1" width="131" height="30"/>
+                                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Format" id="rCI-mx-XpD">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.format" id="AkM-5Q-aJf"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uS1-gp-20z">
+                                                            <rect key="frame" x="3" y="1" width="48" height="48"/>
+                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSInfo" id="mF0-Sx-sZt"/>
+                                                            <connections>
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.icon" id="OWB-Fk-KA7"/>
+                                                            </connections>
+                                                        </imageView>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81K-Xk-AAc">
+                                                            <rect key="frame" x="66" y="32" width="131" height="17"/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Name" id="LrO-E3-EuH">
+                                                                <font key="font" size="13" name=".HelveticaNeueDeskInterface-Bold"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.name" id="4Vz-qe-59c"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="e4g-oN-dRD" firstAttribute="trailing" secondItem="Dh8-iY-kYO" secondAttribute="trailing" id="7UC-M1-C6n"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8Ow-W0-TGx" secondAttribute="trailing" constant="20" id="GTt-OS-49I"/>
+                                                        <constraint firstItem="Hac-Jt-k1y" firstAttribute="trailing" secondItem="L9q-ps-cRA" secondAttribute="trailing" id="HDb-z3-O79"/>
+                                                        <constraint firstItem="sXl-33-BCF" firstAttribute="trailing" secondItem="L9q-ps-cRA" secondAttribute="trailing" id="KJj-c0-Lhf"/>
+                                                        <constraint firstItem="Hac-Jt-k1y" firstAttribute="bottom" secondItem="e4g-oN-dRD" secondAttribute="bottom" id="NS6-oH-HK8"/>
+                                                        <constraint firstItem="L9q-ps-cRA" firstAttribute="leading" secondItem="Dh8-iY-kYO" secondAttribute="trailing" constant="2" id="QzP-8i-3cr"/>
+                                                        <constraint firstItem="sXl-33-BCF" firstAttribute="bottom" secondItem="sHe-vy-nhQ" secondAttribute="bottom" id="Rkj-9n-8pu"/>
+                                                        <constraint firstItem="L9q-ps-cRA" firstAttribute="bottom" secondItem="Dh8-iY-kYO" secondAttribute="bottom" id="SD4-gA-bpE"/>
+                                                        <constraint firstItem="8Ow-W0-TGx" firstAttribute="leading" secondItem="sXl-33-BCF" secondAttribute="trailing" constant="25" id="erQ-1z-Ais"/>
+                                                        <constraint firstItem="sHe-vy-nhQ" firstAttribute="trailing" secondItem="Dh8-iY-kYO" secondAttribute="trailing" id="sh7-3l-rzc"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="textField" destination="81K-Xk-AAc" id="EwH-3y-Yk2"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
                                         </tableColumn>
                                     </tableColumns>
                                     <connections>
-                                        <outlet property="delegate" destination="-2" id="262"/>
+                                        <action trigger="doubleAction" selector="openVolume:" target="-2" id="U7G-Vu-8WW"/>
+                                        <binding destination="39" name="content" keyPath="arrangedObjects" id="avz-qm-sH1"/>
+                                        <binding destination="39" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="avz-qm-sH1" id="i46-Ci-DM0"/>
                                     </connections>
                                 </tableView>
                             </subviews>
@@ -129,76 +191,49 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <button autoresizesSubviews="NO" verticalHuggingPriority="750" id="196">
-                        <rect key="frame" x="336" y="20" width="152" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Open Volume" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="285">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Jd-iU-Ymq">
+                        <rect key="frame" x="14" y="5" width="142" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="gLd-J7-0Xw"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Select Folder…" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NBB-qD-ycn">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k9V-3a-Cw3">
+                        <rect key="frame" x="416" y="5" width="102" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="M5Y-du-rhk"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Open" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0FK-c7-cIP">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="openVolume:" target="-2" id="281"/>
-                            <binding destination="39" name="enabled" keyPath="selectedObjects.@count" id="280"/>
+                            <action selector="openVolume:" target="-2" id="YM7-de-Vsi"/>
+                            <binding destination="39" name="enabled" keyPath="selectedObjects.@count" id="qfb-zO-MEG"/>
                         </connections>
                     </button>
-                    <box autoresizesSubviews="NO" title="Box" titlePosition="noTitle" id="203">
-                        <rect key="frame" x="17" y="16" width="216" height="42"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <view key="contentView" id="Spt-Sr-M3h">
-                            <rect key="frame" x="2" y="2" width="212" height="38"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <button autoresizesSubviews="NO" verticalHuggingPriority="750" id="205">
-                                    <rect key="frame" x="134" y="3" width="66" height="32"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <buttonCell key="cell" type="push" title="..." bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="286">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="openDocument:" target="-1" id="207"/>
-                                    </connections>
-                                </button>
-                                <textField autoresizesSubviews="NO" verticalHuggingPriority="750" id="206">
-                                    <rect key="frame" x="17" y="13" width="118" height="17"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Select Folder:" id="287">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                            </subviews>
-                        </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </box>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="0Jd-iU-Ymq" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" id="8AQ-Wv-VxI"/>
+                    <constraint firstItem="9" firstAttribute="top" secondItem="6" secondAttribute="top" constant="-1" id="8b8-5k-vzc"/>
+                    <constraint firstItem="k9V-3a-Cw3" firstAttribute="bottom" secondItem="0Jd-iU-Ymq" secondAttribute="bottom" id="I1o-iR-B73"/>
+                    <constraint firstAttribute="bottom" secondItem="0Jd-iU-Ymq" secondAttribute="bottom" constant="12" id="LZC-hf-JpM"/>
+                    <constraint firstAttribute="trailing" secondItem="9" secondAttribute="trailing" constant="-1" id="YKI-aj-piW"/>
+                    <constraint firstAttribute="trailing" secondItem="k9V-3a-Cw3" secondAttribute="trailing" constant="20" id="aQ8-fW-6ux"/>
+                    <constraint firstItem="9" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="-1" id="fMh-Gi-nUw"/>
+                    <constraint firstItem="0Jd-iU-Ymq" firstAttribute="top" secondItem="9" secondAttribute="bottom" constant="12" id="jnG-pa-YVg"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="261"/>
-                <outlet property="initialFirstResponder" destination="196" id="254"/>
             </connections>
         </window>
-        <arrayController objectClassName="NTVolume" editable="NO" automaticallyPreparesContent="YES" avoidsEmptySelection="NO" clearsFilterPredicateOnInsertion="NO" id="39" userLabel="VolumesArrayController">
-            <declaredKeys>
-                <string>volume.mountPointFileDesc.displayName</string>
-                <string>image</string>
-                <string>volume.mountDevice</string>
-                <string>volume.driveName</string>
-                <string>volume.fileSystemName</string>
-                <string>volume.diskIDString</string>
-                <string>volume.totalBytes</string>
-                <string>volume.freeBytes</string>
-                <string>volume.driveInfoString</string>
-                <string>volume.mountPointFileDesc.volumeFormat</string>
-                <string>volume</string>
-                <string>volume.mountPointFileDesc.path</string>
-                <string>@count</string>
-            </declaredKeys>
-            <connections>
-                <binding destination="-2" name="contentArray" keyPath="volumes" id="282"/>
-            </connections>
-        </arrayController>
+        <arrayController objectClassName="Volume" editable="NO" automaticallyPreparesContent="YES" selectsInsertedObjects="NO" avoidsEmptySelection="NO" clearsFilterPredicateOnInsertion="NO" id="39" userLabel="VolumesArrayController"/>
     </objects>
+    <resources>
+        <image name="NSInfo" width="32" height="32"/>
+    </resources>
 </document>

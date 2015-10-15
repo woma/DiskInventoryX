@@ -9,6 +9,8 @@
 extern unsigned g_fileCount;
 extern unsigned g_folderCount;
 
+@class NTFileDesc;
+
 @interface NSString (ComparisonAdditions)
 - (NSComparisonResult) compareAsFilesystemName: (NSString*) other;
 @end

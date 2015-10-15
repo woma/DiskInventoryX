@@ -123,7 +123,7 @@
     NSAssert( hPixMap != NULL, @"no PixMap for our offscreen GWorld" );
 
     //if our GWorld isn't already locked, lock it now
-    BOOL alreadyLocked = ( GetPixelsState( hPixMap ) & pixelsLocked ) != 0;
+    BOOL alreadyLocked = ( GetPixelsState( hPixMap ) & /*pixelsLocked*/1 ) != 0;
 
     if ( !alreadyLocked && !LockPixels( GetGWorldPixMap( [self qdPort] ) ) )
         NSAssert( FALSE, @"can't lock offscreen GWorld" );

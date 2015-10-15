@@ -148,7 +148,8 @@
 
 	[self setStringValue: [[self stringValue] truncatedStringWithMaxWidth: NSWidth(cellFrame)
 															  themeFontID: themeFont
-														   truncationMode: truncEnd]];
+                                                           truncationMode: 100]];
+//														   truncationMode: truncEnd]];
     [super drawWithFrame:cellFrame inView:controlView];
 }
 

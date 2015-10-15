@@ -7,7 +7,7 @@
 //
 
 #import "FileTypeColors.h"
-#import <TreeMapView/TMVCushionRenderer.h>
+#import "TMVCushionRenderer.h"
 
 @implementation FileTypeColors
 

@@ -9,7 +9,6 @@
 #import "FilesOutlineViewController.h"
 #import "FSItem.h"
 #import "FSItem-Utilities.h"
-#import <CocoaTechFoundation/NSImage-NTExtensions.h>
 #import "NSOutlineView-ContextMenuExtension.h"
 #import "MainWindowController.h"
 #import "Preferences.h"

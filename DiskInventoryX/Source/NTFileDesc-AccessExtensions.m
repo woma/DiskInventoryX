@@ -7,7 +7,6 @@
 //
 
 #import "NTFileDesc-AccessExtensions.h"
-#import <CocoaTechFoundation/NTFileDesc.h>
 
 @implementation NTFileDesc(AccessExtensions)
 

@@ -6,8 +6,11 @@
 //  Copyright (c) 2003 Tjark Derlien. All rights reserved.
 //
 
+#import <CocoatechCore/CocoatechCore.h>
+#import <CocoatechFile/CocoatechFile.h>
+
 #import "MyDocumentController.h"
-#import "DrivesPanelController.h"
+#import "VolumesPanelController.h"
 #import "Preferences.h"
 #import "PrefsPanelController.h"
 #import "FileSystemDoc.h"
@@ -136,7 +139,7 @@ BOOL g_EnableLogging;
 
 - (IBAction) showPreferencesPanel: (id) sender
 {
-	[[PrefsPanelController sharedPreferenceController] showPreferencesPanel: self];
+//	[[PrefsPanelController sharedPreferenceController] showPreferencesPanel: self];
 	//[[OAPreferenceController sharedPreferenceController] showPreferencesPanel: self];
 }
 
@@ -163,7 +166,7 @@ BOOL g_EnableLogging;
 	
 	//show the drives panel before "applicationDidFinishLaunching" so the panel is visible before the first document is loaded
 	//(e.g. through drag&drop)
-	[[DrivesPanelController sharedController] showPanel];
+	[[VolumesPanelController sharedController] showWindow:self];
 }
 
 - (void) applicationDidFinishLaunching:(NSNotification *)notification

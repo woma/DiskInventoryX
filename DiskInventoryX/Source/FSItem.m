@@ -7,8 +7,7 @@
 //
 
 #import "FSItem.h"
-#import <CocoaTechFoundation/NTFileDesc.h>
-#import <CocoaTechFoundation/NTFSRefObject.h>
+#import <CocoatechFile/CocoatechFile.h>
 #import <NTFileDesc-AccessExtensions.h>
 #import "NTFSRefObject-AccessExtensions.h"
 #import <OmniFoundation/NSMutableArray-OFExtensions.h>
