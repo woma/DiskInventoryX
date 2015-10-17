@@ -29,62 +29,51 @@
 
  */
 
-#import "LoadingPanelController.h"
 
-@interface LoadingPanelController ()
-@property (assign) NSModalSession modalSession;
-@property (readwrite) BOOL cancelled;
-@end
+#import "NSURL+PathExtension.h"
 
-#pragma mark -
+@implementation NSURL (PathExtension)
 
-@implementation LoadingPanelController
-
-- (id)init
+- (BOOL)isDirectory
 {
-	if (self = [super initWithWindowNibName:@"LoadingPanel"])
-    {
-        [self.progressIndicator setUsesThreadedAnimation:NO];
-    }
-	return self;
+    NSNumber *isDirectory;
+    [self getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:NULL];
+    return [isDirectory boolValue];
 }
 
-- (IBAction)showWindow:(id)sender
+- (NSString *)name
 {
-    [super showWindow:sender];
-
-    // begin modal session for the window
-    self.modalSession = [NSApp beginModalSessionForWindow:self.window];
+    NSString *name;
+    [self getResourceValue:&name forKey:NSURLNameKey error:NULL];
+    return name;
 }
 
-- (void)close
+- (NSUInteger)fileSize
 {
-    // end modal session for the window
-    [NSApp endModalSession:self.modalSession];
-
-    [super close];
+    NSNumber *fileSize;
+    [self getResourceValue:&fileSize forKey:NSURLFileSizeKey error:NULL];
+    return [fileSize unsignedIntegerValue];
 }
 
-- (void)setMessageText:(NSString *)text
+- (NSDate *)creationDate;
 {
-	self.textField.stringValue = text;
+    NSDate *creationDate;
+    [self getResourceValue:&creationDate forKey:NSURLCreationDateKey error:NULL];
+    return creationDate;
 }
 
-- (void)startAnimation:(id)sender
+- (NSURL *)parentURL
 {
-    [self.progressIndicator startAnimation:sender];
+    NSURL *parentURL;
+    [self getResourceValue:&parentURL forKey:NSURLParentDirectoryURLKey error:NULL];
+    return parentURL;
 }
 
-- (void)stopAnimation:(id)sender
+- (NSImage *)thumbnail;
 {
-    [self.progressIndicator stopAnimation:sender];
-}
-
-- (IBAction)cancel:(id)sender
-{
-	self.cancelled = YES;
-	[self.cancelButton setEnabled:NO];
+    NSImage *thumbnail;
+    [self getResourceValue:&thumbnail forKey:NSURLThumbnailKey error:NULL];
+    return thumbnail;
 }
 
 @end
-

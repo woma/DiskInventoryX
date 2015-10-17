@@ -99,7 +99,12 @@
 - (IBAction)openVolume:(id)sender
 {
     Volume *selectedVolume = [[self.volumesController selectedObjects] firstObject];
-    NSLog(@"Open %@", [selectedVolume.url path]);
+
+    [[NSRunLoop currentRunLoop] performSelector:@selector(openDocumentWithContentsOfURL:)
+                                         target: [NSDocumentController sharedDocumentController]
+                                       argument: selectedVolume.url
+                                          order: 1
+                                          modes: [NSArray arrayWithObject: NSDefaultRunLoopMode]];
 }
 
 @end

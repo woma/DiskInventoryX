@@ -29,62 +29,14 @@
 
  */
 
-#import "LoadingPanelController.h"
 
-@interface LoadingPanelController ()
-@property (assign) NSModalSession modalSession;
-@property (readwrite) BOOL cancelled;
-@end
+@interface NSURL (PathExtension)
 
-#pragma mark -
-
-@implementation LoadingPanelController
-
-- (id)init
-{
-	if (self = [super initWithWindowNibName:@"LoadingPanel"])
-    {
-        [self.progressIndicator setUsesThreadedAnimation:NO];
-    }
-	return self;
-}
-
-- (IBAction)showWindow:(id)sender
-{
-    [super showWindow:sender];
-
-    // begin modal session for the window
-    self.modalSession = [NSApp beginModalSessionForWindow:self.window];
-}
-
-- (void)close
-{
-    // end modal session for the window
-    [NSApp endModalSession:self.modalSession];
-
-    [super close];
-}
-
-- (void)setMessageText:(NSString *)text
-{
-	self.textField.stringValue = text;
-}
-
-- (void)startAnimation:(id)sender
-{
-    [self.progressIndicator startAnimation:sender];
-}
-
-- (void)stopAnimation:(id)sender
-{
-    [self.progressIndicator stopAnimation:sender];
-}
-
-- (IBAction)cancel:(id)sender
-{
-	self.cancelled = YES;
-	[self.cancelButton setEnabled:NO];
-}
+- (BOOL)isDirectory;
+- (NSString *)name;
+- (NSUInteger)fileSize;
+- (NSDate *)creationDate;
+- (NSURL *)parentURL;
+- (NSImage *)thumbnail;
 
 @end
-

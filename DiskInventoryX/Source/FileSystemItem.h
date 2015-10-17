@@ -26,65 +26,37 @@
  The views and conclusions contained in the software and documentation are those
  of the authors and should not be interpreted as representing official policies,
  either expressed or implied, of the FreeBSD Project.
-
+ 
  */
 
-#import "LoadingPanelController.h"
+NS_ASSUME_NONNULL_BEGIN
 
-@interface LoadingPanelController ()
-@property (assign) NSModalSession modalSession;
-@property (readwrite) BOOL cancelled;
+@class FileSystemItem;
+
+@protocol FileSystemItemDelegate
+@optional
+- (void)fileSystemItemDidStartFetching:(FileSystemItem *)fileSystemItem;
+- (void)fileSystemItemDidStopFetching:(FileSystemItem *)fileSystemItem cancelled:(BOOL)cancelled;
+- (void)fileSystemItem:(FileSystemItem *)fileSystemItem fetchingURL:(NSURL*)url;
 @end
 
 #pragma mark -
 
-@implementation LoadingPanelController
+@interface FileSystemItem : NSObject
 
-- (id)init
-{
-	if (self = [super initWithWindowNibName:@"LoadingPanel"])
-    {
-        [self.progressIndicator setUsesThreadedAnimation:NO];
-    }
-	return self;
-}
+- (instancetype)initWithURL:(NSURL *)url;
 
-- (IBAction)showWindow:(id)sender
-{
-    [super showWindow:sender];
+- (BOOL)fetchChilds;
+- (void)cancelFetching;
 
-    // begin modal session for the window
-    self.modalSession = [NSApp beginModalSessionForWindow:self.window];
-}
+- (NSString *)name;
+- (NSImage *)icon;
+- (NSUInteger)size;
+- (FileSystemItem *)parent;
+- (NSMutableArray<FileSystemItem *> *)children;
 
-- (void)close
-{
-    // end modal session for the window
-    [NSApp endModalSession:self.modalSession];
-
-    [super close];
-}
-
-- (void)setMessageText:(NSString *)text
-{
-	self.textField.stringValue = text;
-}
-
-- (void)startAnimation:(id)sender
-{
-    [self.progressIndicator startAnimation:sender];
-}
-
-- (void)stopAnimation:(id)sender
-{
-    [self.progressIndicator stopAnimation:sender];
-}
-
-- (IBAction)cancel:(id)sender
-{
-	self.cancelled = YES;
-	[self.cancelButton setEnabled:NO];
-}
+@property (nonatomic, weak, nullable) NSObject<FileSystemItemDelegate> *delegate;
 
 @end
 
+NS_ASSUME_NONNULL_END

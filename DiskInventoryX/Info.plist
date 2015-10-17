@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
@@ -10,55 +10,11 @@
 			<key>CFBundleTypeIconFile</key>
 			<string></string>
 			<key>CFBundleTypeName</key>
-			<string>Folder</string>
-			<key>CFBundleTypeOSTypes</key>
-			<array>
-				<string>fold</string>
-			</array>
+			<string>public.directory</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>NSDocumentClass</key>
-			<string>FileSystemDoc</string>
-		</dict>
-		<dict>
-			<key>CFBundleTypeName</key>
-			<string>Folder</string>
-			<key>CFBundleTypeOSTypes</key>
-			<array>
-				<string>disk</string>
-			</array>
-			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
-			<key>NSDocumentClass</key>
-			<string>FileSystemDoc</string>
-		</dict>
-		<dict>
-			<key>CFBundleTypeExtensions</key>
-			<array>
-				<string>app</string>
-			</array>
-			<key>CFBundleTypeName</key>
-			<string>App</string>
-			<key>CFBundleTypeOSTypes</key>
-			<array>
-				<string>APPL</string>
-			</array>
-			<key>NSDocumentClass</key>
-			<string>FileSystemDoc</string>
-		</dict>
-		<dict>
-			<key>CFBundleTypeExtensions</key>
-			<array>
-				<string>plugin</string>
-			</array>
-			<key>CFBundleTypeName</key>
-			<string>Plugin</string>
-			<key>CFBundleTypeOSTypes</key>
-			<array>
-				<string>BNDL</string>
-			</array>
-			<key>NSDocumentClass</key>
-			<string>FileSystemDoc</string>
+			<string>Document</string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
@@ -171,8 +127,7 @@
 				<key>category</key>
 				<string>Basic</string>
 				<key>defaultsArray</key>
-				<array>
-				</array>
+				<array/>
 				<key>icon</key>
 				<string>FinderCMPreferences</string>
 				<key>identifier</key>

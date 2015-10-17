@@ -29,62 +29,19 @@
 
  */
 
-#import "LoadingPanelController.h"
+#import <Foundation/Foundation.h>
 
-@interface LoadingPanelController ()
-@property (assign) NSModalSession modalSession;
-@property (readwrite) BOOL cancelled;
-@end
 
-#pragma mark -
-
-@implementation LoadingPanelController
-
-- (id)init
+@interface DocumentController : NSDocumentController
 {
-	if (self = [super initWithWindowNibName:@"LoadingPanel"])
-    {
-        [self.progressIndicator setUsesThreadedAnimation:NO];
-    }
-	return self;
+	IBOutlet NSMenu* _zoomStackMenu;
+	IBOutlet NSPanel* _donationPanel;
 }
 
-- (IBAction)showWindow:(id)sender
-{
-    [super showWindow:sender];
+- (IBAction) showPreferencesPanel: (id) sender;
+- (IBAction) gotoHomepage: (id) sender;
+- (IBAction) closeDonationPanel: (id) sender;
 
-    // begin modal session for the window
-    self.modalSession = [NSApp beginModalSessionForWindow:self.window];
-}
-
-- (void)close
-{
-    // end modal session for the window
-    [NSApp endModalSession:self.modalSession];
-
-    [super close];
-}
-
-- (void)setMessageText:(NSString *)text
-{
-	self.textField.stringValue = text;
-}
-
-- (void)startAnimation:(id)sender
-{
-    [self.progressIndicator startAnimation:sender];
-}
-
-- (void)stopAnimation:(id)sender
-{
-    [self.progressIndicator stopAnimation:sender];
-}
-
-- (IBAction)cancel:(id)sender
-{
-	self.cancelled = YES;
-	[self.cancelButton setEnabled:NO];
-}
+- (void)openDocumentWithContentsOfURL:(NSURL *)url;
 
 @end
-

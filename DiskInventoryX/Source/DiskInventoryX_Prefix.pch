@@ -7,6 +7,8 @@
     #import <QuartzCore/QuartzCore.h>
     #import <OmniBase/OmniBase.h>
 
+    #import "NSURL+PathExtension.h"
+
 	//global variable which enables/disables logging
 	extern BOOL g_EnableLogging;
 	#define LOG(x, args...) { if (g_EnableLogging) NSLog(x, ## args); }

@@ -26,65 +26,18 @@
  The views and conclusions contained in the software and documentation are those
  of the authors and should not be interpreted as representing official policies,
  either expressed or implied, of the FreeBSD Project.
-
+ 
  */
 
-#import "LoadingPanelController.h"
+#import "FileSystemItem.h"
 
-@interface LoadingPanelController ()
-@property (assign) NSModalSession modalSession;
-@property (readwrite) BOOL cancelled;
-@end
 
-#pragma mark -
+@class LoadingPanelController;
 
-@implementation LoadingPanelController
+@interface Document : NSDocument <FileSystemItemDelegate>
 
-- (id)init
-{
-	if (self = [super initWithWindowNibName:@"LoadingPanel"])
-    {
-        [self.progressIndicator setUsesThreadedAnimation:NO];
-    }
-	return self;
-}
-
-- (IBAction)showWindow:(id)sender
-{
-    [super showWindow:sender];
-
-    // begin modal session for the window
-    self.modalSession = [NSApp beginModalSessionForWindow:self.window];
-}
-
-- (void)close
-{
-    // end modal session for the window
-    [NSApp endModalSession:self.modalSession];
-
-    [super close];
-}
-
-- (void)setMessageText:(NSString *)text
-{
-	self.textField.stringValue = text;
-}
-
-- (void)startAnimation:(id)sender
-{
-    [self.progressIndicator startAnimation:sender];
-}
-
-- (void)stopAnimation:(id)sender
-{
-    [self.progressIndicator stopAnimation:sender];
-}
-
-- (IBAction)cancel:(id)sender
-{
-	self.cancelled = YES;
-	[self.cancelButton setEnabled:NO];
-}
+@property (nonatomic, strong) LoadingPanelController *progressController;
+@property (nonatomic, strong) FileSystemItem *rootItem;
+@property (nonatomic, weak) FileSystemItem *selectedItem;
 
 @end
-
