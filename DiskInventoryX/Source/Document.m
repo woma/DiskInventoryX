@@ -32,7 +32,8 @@
 #import "Document.h"
 
 #import "FileSystemItem.h"
-#import "LoadingPanelController.h"
+#import "DocumentWindowController.h"
+
 
 @implementation Document
 
@@ -42,61 +43,19 @@
              ofType:(NSString *)type
               error:(NSError * _Nullable *)error
 {
-    self.progressController = [LoadingPanelController new];
-    [self.progressController addObserver:self
-                              forKeyPath:@"cancelled"
-                                 options:NSKeyValueObservingOptionNew
-                                 context:NULL];
-
-    [self.progressController showWindow:nil];
-
-    self.rootItem = [[FileSystemItem alloc] initWithURL:url];
-    self.rootItem.delegate = self;
-    [self.rootItem performSelectorInBackground:@selector(fetchChilds) withObject:nil];
-
-    return YES;
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary<NSString *, id> *)change
-                       context:(void *)context
-{
-    if (object == self.progressController && [keyPath isEqualToString:@"cancelled"])
+    if (url.isDirectory)
     {
-        [self.rootItem cancelFetching];
+        self.rootItem = [[FileSystemItem alloc] initWithURL:url];
+        return YES;
     }
-    else
-    {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
+
+    return NO;
 }
 
-@end
-
-#pragma mark -
-
-@implementation Document (FileSystemItemDelegate)
-
-- (void)fileSystemItem:(FileSystemItem *)fileSystemItem fetchingURL:(NSURL *)url
+- (void)makeWindowControllers
 {
-    [self.progressController performSelectorOnMainThread:@selector(setMessageText:)
-                                              withObject:[url path]
-                                           waitUntilDone:NO];
-}
-
-- (void)fileSystemItemDidStartFetching:(FileSystemItem *)fileSystemItem
-{
-    [self.progressController performSelectorOnMainThread:@selector(startAnimation:)
-                                              withObject:self
-                                           waitUntilDone:NO];
-}
-
--(void)fileSystemItemDidStopFetching:(FileSystemItem *)fileSystemItem cancelled:(BOOL)cancelled
-{
-    [self.progressController performSelectorOnMainThread:@selector(close)
-                                              withObject:nil
-                                           waitUntilDone:NO];
+    DocumentWindowController *controller = [DocumentWindowController new];
+    [self addWindowController:controller];
 }
 
 @end

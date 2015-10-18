@@ -32,11 +32,11 @@
 #import "VolumesPanelController.h"
 
 #import "Volume.h"
+#import "FileSizeTransformer.h"
 
 
 @interface VolumesPanelController ()
 - (void)reloadVolumes;
-@property (strong, nonatomic) VolumeSizeTransformer *volumeSizeTransformer;
 @end
 
 #pragma mark -
@@ -60,9 +60,6 @@
 {
     if (self = [super init])
     {
-        //register volume transformers needed in the volume tableview (before Nib is loaded!)
-        [NSValueTransformer setValueTransformer:self.volumeSizeTransformer forName: @"VolumeSizeTransformer"];
-
         [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
                                                                selector:@selector(volumeDidMount:)
                                                                    name:NSWorkspaceDidMountNotification

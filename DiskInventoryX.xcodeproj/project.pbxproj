@@ -16,6 +16,8 @@
 		197C0F701BD3CC2300A69FBA /* DocumentWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197C0F6F1BD3CC2300A69FBA /* DocumentWindow.xib */; settings = {ASSET_TAGS = (); }; };
 		197C0F771BD3FC1D00A69FBA /* NSURL+PathExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 197C0F751BD3FC1D00A69FBA /* NSURL+PathExtension.h */; settings = {ASSET_TAGS = (); }; };
 		197C0F781BD3FC1D00A69FBA /* NSURL+PathExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 197C0F761BD3FC1D00A69FBA /* NSURL+PathExtension.m */; settings = {ASSET_TAGS = (); }; };
+		19A57F841BD7F1F200512EEB /* FileSizeTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A57F821BD7F1F200512EEB /* FileSizeTransformer.h */; settings = {ASSET_TAGS = (); }; };
+		19A57F851BD7F1F200512EEB /* FileSizeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A57F831BD7F1F200512EEB /* FileSizeTransformer.m */; settings = {ASSET_TAGS = (); }; };
 		19A60BB21BCF36D300FD3D27 /* Volume.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A60BB01BCF36D300FD3D27 /* Volume.h */; settings = {ASSET_TAGS = (); }; };
 		19A60BB31BCF36D300FD3D27 /* Volume.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A60BB11BCF36D300FD3D27 /* Volume.m */; settings = {ASSET_TAGS = (); }; };
 		19A60CC21BCF548800FD3D27 /* VolumesPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A60CC01BCF548800FD3D27 /* VolumesPanelController.h */; settings = {ASSET_TAGS = (); }; };
@@ -164,6 +166,8 @@
 		197C0F6F1BD3CC2300A69FBA /* DocumentWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentWindow.xib; sourceTree = "<group>"; };
 		197C0F751BD3FC1D00A69FBA /* NSURL+PathExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+PathExtension.h"; sourceTree = "<group>"; };
 		197C0F761BD3FC1D00A69FBA /* NSURL+PathExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+PathExtension.m"; sourceTree = "<group>"; };
+		19A57F821BD7F1F200512EEB /* FileSizeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSizeTransformer.h; sourceTree = "<group>"; };
+		19A57F831BD7F1F200512EEB /* FileSizeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSizeTransformer.m; sourceTree = "<group>"; };
 		19A60BB01BCF36D300FD3D27 /* Volume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volume.h; sourceTree = "<group>"; };
 		19A60BB11BCF36D300FD3D27 /* Volume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volume.m; sourceTree = "<group>"; };
 		19A60CC01BCF548800FD3D27 /* VolumesPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumesPanelController.h; sourceTree = "<group>"; };
@@ -376,10 +380,10 @@
 				FC79F14907FD45A4000BEBFA /* FSItemIndex.m */,
 				FC528AC5076079B500374589 /* LoadingPanelController.h */,
 				FC528AC6076079B500374589 /* LoadingPanelController.m */,
+				19A57F821BD7F1F200512EEB /* FileSizeTransformer.h */,
+				19A57F831BD7F1F200512EEB /* FileSizeTransformer.m */,
 				FC84DD64074D61EF00E252C8 /* FSItem-Utilities.h */,
 				FC84DD65074D61EF00E252C8 /* FSItem-Utilities.m */,
-				FC755269054C3BFF00BBC68D /* DocumentController.m */,
-				FC75526A054C3BFF00BBC68D /* DocumentController.h */,
 				FC75526B054C3BFF00BBC68D /* MainWindowController.m */,
 				FC75526C054C3BFF00BBC68D /* MainWindowController.h */,
 				FC755270054C3BFF00BBC68D /* FSItem.h */,
@@ -388,10 +392,15 @@
 				FC755272054C3BFF00BBC68D /* FileTypeColors.h */,
 				FC755273054C3BFF00BBC68D /* FileSystemDoc.m */,
 				FC755274054C3BFF00BBC68D /* FileSystemDoc.h */,
-				19346ADC1BD2956C00865BD9 /* Document.h */,
-				19346ADD1BD2956C00865BD9 /* Document.m */,
 				19346AE01BD29F3000865BD9 /* FileSystemItem.h */,
 				19346AE11BD29F3000865BD9 /* FileSystemItem.m */,
+				19346ADC1BD2956C00865BD9 /* Document.h */,
+				19346ADD1BD2956C00865BD9 /* Document.m */,
+				FC755269054C3BFF00BBC68D /* DocumentController.m */,
+				FC75526A054C3BFF00BBC68D /* DocumentController.h */,
+				197C0F6B1BD3CACF00A69FBA /* DocumentWindowController.h */,
+				197C0F6C1BD3CACF00A69FBA /* DocumentWindowController.m */,
+				197C0F6F1BD3CC2300A69FBA /* DocumentWindow.xib */,
 			);
 			name = "Main Classes";
 			path = DiskInventoryX/Source;
@@ -674,9 +683,11 @@
 				FC75528E054C3BFF00BBC68D /* FileTypeColors.h in Headers */,
 				FC755290054C3BFF00BBC68D /* FileSystemDoc.h in Headers */,
 				19CB211C1BCCE6B800233107 /* TMVItem.h in Headers */,
+				19A57F841BD7F1F200512EEB /* FileSizeTransformer.h in Headers */,
 				FC755292054C3BFF00BBC68D /* FilesOutlineViewController.h in Headers */,
 				FC755294054C3BFF00BBC68D /* FileKindsTableController.h in Headers */,
 				FCC564780615EA5E00C5884D /* FileSizeFormatter.h in Headers */,
+				197C0F6D1BD3CACF00A69FBA /* DocumentWindowController.h in Headers */,
 				FCB62FF0070CAE5F00BA5FD4 /* Timing.h in Headers */,
 				FC3FFAD9071074ED004BEC56 /* NTFileDesc-AccessExtensions.h in Headers */,
 				19A60BB21BCF36D300FD3D27 /* Volume.h in Headers */,
@@ -813,6 +824,7 @@
 				FC0DFD0207634AC60049E191 /* DonationPanel.xib in Resources */,
 				FCEC79A90768556E008895C2 /* Help in Resources */,
 				FC3112D90805853200075F08 /* FinderCMPreferencesPage.xib in Resources */,
+				197C0F701BD3CC2300A69FBA /* DocumentWindow.xib in Resources */,
 				FCE5D6580806A2CC00BDB57A /* FinderCMPreferences.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -840,7 +852,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197C0F6E1BD3CACF00A69FBA /* DocumentWindowController.m in Sources */,
 				19346ADF1BD2956C00865BD9 /* Document.m in Sources */,
+				19A57F851BD7F1F200512EEB /* FileSizeTransformer.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				19D0AA691BD2AEEA00745668 /* LoadingPanelController.m in Sources */,
 				19A60BB31BCF36D300FD3D27 /* Volume.m in Sources */,
@@ -986,9 +1000,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DEBUGGING_SYMBOLS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
@@ -1024,9 +1036,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -1058,9 +1068,7 @@
 		FCA73FF5085C426A00C8726E /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1091,7 +1099,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Debug;
 		};
@@ -1099,7 +1107,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Release;
 		};
@@ -1107,7 +1115,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Default;
 		};

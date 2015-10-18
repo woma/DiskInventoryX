@@ -26,31 +26,21 @@
  The views and conclusions contained in the software and documentation are those
  of the authors and should not be interpreted as representing official policies,
  either expressed or implied, of the FreeBSD Project.
- 
+
  */
 
-NS_ASSUME_NONNULL_BEGIN
+@class Document;
 
-@interface FileSystemItem : NSObject
+@interface DocumentWindowController : NSWindowController <NSMenuDelegate>
 
-- (instancetype)initWithURL:(NSURL *)url;
+- (IBAction)cancelFetching:(id)sender;
+- (IBAction)openFile:(id)sender;
+- (IBAction)showInFinder:(id)sender;
 
-- (BOOL)isFetched;
-- (BOOL)isCancelled;
-- (void)fetchChilds;
-- (void)cancelFetching;
-
-- (NSURL *)url;
-- (NSString *)name;
-- (NSString *)path;
-- (NSImage *)icon;
-- (NSUInteger)size;
-- (FileSystemItem *)parent;
-- (NSMutableArray<FileSystemItem *> *)children;
-
-@property (readonly, weak) NSURL *fetchingURL;
-@property (readonly, weak) NSOperation *fetchingOperation;
+@property (nonatomic) IBOutlet NSPanel *fetchingPanel;
+@property (nonatomic) IBOutlet NSTreeController *fileSystemItemController;
+@property (nonatomic) IBOutlet NSOutlineView *fileTreeView;
+@property (nonatomic) IBOutlet NSButton *cancelFetchingButton;
+@property (nonatomic) IBOutlet NSTextField *fetchingItemLabel;
 
 @end
-
-NS_ASSUME_NONNULL_END

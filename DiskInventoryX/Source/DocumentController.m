@@ -29,20 +29,16 @@
 
  */
 
-#import <CocoatechCore/CocoatechCore.h>
-#import <CocoatechFile/CocoatechFile.h>
-
 #import "DocumentController.h"
+
 #import "VolumesPanelController.h"
 #import "Preferences.h"
 #import "PrefsPanelController.h"
-#import "FileSystemDoc.h"
-#import "DIXFinderCMInstaller.h"
+
 
 //global variable which enables/disables logging
 BOOL g_EnableLogging;
 
-//============ implementation MyDocumentController ==========================================================
 
 @implementation DocumentController
 
@@ -196,37 +192,37 @@ BOOL g_EnableLogging;
 
 #pragma mark -----------------NSMenu delegates-----------------------
 
-- (void) menuNeedsUpdate: (NSMenu*) zoomStackMenu
-{
-	OBPRECONDITION( _zoomStackMenu == zoomStackMenu );
-	
-	FileSystemDoc *doc = [self currentDocument];
-	NSArray *zoomStack = [doc zoomStack];
-	
-	//thanks to ObjC, [zoomStack count] will evaluate to 0 if there is no current doc
-	unsigned i;
-	for ( i = 0; i < [zoomStack count]; i++ )
-	{
-		FSItem *fsItem = nil;
-		if ( i == 0 )
-			fsItem = [doc rootItem];
-		else
-			fsItem = [zoomStack objectAtIndex: i-1];
-		
-		if ( i >= [zoomStackMenu numberOfItems] )
-			[zoomStackMenu addItem:[NSMenuItem new]];
-		
-		NSMenuItem *menuItem = [zoomStackMenu itemAtIndex: i];
-		
-		[menuItem setTitle: [fsItem displayName]];
-		[menuItem setRepresentedObject: fsItem];
-		[menuItem setTarget: nil];
-		[menuItem setAction: @selector(zoomOutTo:)];
-	}
-	
-	while ( [zoomStackMenu numberOfItems] > [zoomStack count] )
-		[zoomStackMenu removeItemAtIndex: [zoomStackMenu numberOfItems] -1];
-}
+//- (void) menuNeedsUpdate: (NSMenu*) zoomStackMenu
+//{
+//	OBPRECONDITION( _zoomStackMenu == zoomStackMenu );
+//	
+//	FileSystemDoc *doc = [self currentDocument];
+//	NSArray *zoomStack = [doc zoomStack];
+//	
+//	//thanks to ObjC, [zoomStack count] will evaluate to 0 if there is no current doc
+//	unsigned i;
+//	for ( i = 0; i < [zoomStack count]; i++ )
+//	{
+//		FSItem *fsItem = nil;
+//		if ( i == 0 )
+//			fsItem = [doc rootItem];
+//		else
+//			fsItem = [zoomStack objectAtIndex: i-1];
+//		
+//		if ( i >= [zoomStackMenu numberOfItems] )
+//			[zoomStackMenu addItem:[NSMenuItem new]];
+//		
+//		NSMenuItem *menuItem = [zoomStackMenu itemAtIndex: i];
+//		
+//		[menuItem setTitle: [fsItem displayName]];
+//		[menuItem setRepresentedObject: fsItem];
+//		[menuItem setTarget: nil];
+//		[menuItem setAction: @selector(zoomOutTo:)];
+//	}
+//	
+//	while ( [zoomStackMenu numberOfItems] > [zoomStack count] )
+//		[zoomStackMenu removeItemAtIndex: [zoomStackMenu numberOfItems] -1];
+//}
 
 @end
 

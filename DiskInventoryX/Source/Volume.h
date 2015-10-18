@@ -29,10 +29,6 @@
 
  */
 
-@interface VolumeSizeTransformer : NSValueTransformer @end
-
-#pragma mark -
-
 @interface Volume : NSObject
 
 + (instancetype)volumeWithURL:(NSURL*)url;

@@ -31,43 +31,6 @@
 
 #import "Volume.h"
 
-@implementation VolumeSizeTransformer
-
-+ (Class)transformedValueClass { return [NSString class]; }
-+ (BOOL)allowsReverseTransformation { return NO; }
-
-- (id)transformedValue:(id)value
-{
-    if (value && ![value isKindOfClass:[NSNumber class]])
-    {
-        [NSException raise: NSInternalInconsistencyException
-                    format: @"Value (%@) is not kind of NSNumber.", [value class]];
-    }
-
-    NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
-    numberFormatter.locale = [NSLocale currentLocale];
-    numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
-    numberFormatter.maximumFractionDigits = 1;
-
-    if ([value integerValue] > 1e9) {
-        NSNumber *number = [NSNumber numberWithFloat:[value floatValue] / 1e9];
-        return [NSString stringWithFormat:@"%@ GB", [numberFormatter stringFromNumber:number]];
-    }
-    else if ([value integerValue] > 1e6) {
-        NSNumber *number = [NSNumber numberWithFloat:[value floatValue] / 1e6];
-        return [NSString stringWithFormat:@"%@ MB", [numberFormatter stringFromNumber:number]];
-    }
-    else if ([value integerValue] > 1e5) {
-        NSNumber *number = [NSNumber numberWithFloat:[value floatValue] / 1e3];
-        return [NSString stringWithFormat:@"%@ KB", [numberFormatter stringFromNumber:number]];
-    }
-
-    return [NSString stringWithFormat:@"%@ Byte", [numberFormatter stringFromNumber:value]];
-}
-
-@end
-
-#pragma mark -
 
 @implementation Volume
 

@@ -31,16 +31,25 @@
 
 #import "FileSystemItem.h"
 
+
 @interface FileSystemItem ()
+
+- (void)fetch;
+
+@property (nonatomic, assign, getter=isFetched) BOOL fetched;
+@property (nonatomic, assign, getter=isCancelled) BOOL cancelled;
 
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *path;
 @property (nonatomic, strong) NSImage *icon;
 @property (nonatomic, assign) NSUInteger size;
-@property (nonatomic, strong) NSMutableArray<FileSystemItem *> *children;
+
 @property (nonatomic, weak) FileSystemItem *parent;
-@property (atomic, assign, getter=isFetching) BOOL fetching;
-@property (atomic, assign, getter=isCancelled) BOOL cancelled;
+@property (nonatomic, strong) NSMutableArray<FileSystemItem *> *children;
+
+@property (nonatomic, weak) NSURL *fetchingURL;
+@property (nonatomic, weak) NSOperation *fetchingOperation;
 
 @end
 
@@ -57,74 +66,79 @@
     return self;
 }
 
-- (BOOL)fetchChilds
+- (void)fetchChilds
 {
-    @synchronized(self)
-    {
-        if ([self isFetching]) { return NO; }
+    NSOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
+                                                                  selector:@selector(fetch)
+                                                                    object:nil];
+    self.fetchingOperation = operation;
 
-        self.fetching = YES;
-        self.cancelled = NO;
-    }
+    NSOperationQueue *operationQueue = [NSOperationQueue new];
+    [operationQueue addOperation:operation];
+}
 
-    if ([self.delegate respondsToSelector:@selector(fileSystemItemDidStartFetching:)])
-    {
-        [self.delegate fileSystemItemDidStartFetching:self];
-    }
-
+- (void)fetch
+{
     self.children = [NSMutableArray<FileSystemItem*> new];
 
-    // Create a local file manager instance
+    // create a local file manager instance and enumerator
     NSFileManager *fileManager = [NSFileManager new];
     NSDirectoryEnumerator *dirEnumerator = [fileManager enumeratorAtURL:self.url
                                              includingPropertiesForKeys:@[NSURLIsDirectoryKey,
-                                                                          NSURLParentDirectoryURLKey]
+                                                                          NSURLParentDirectoryURLKey,
+                                                                          NSURLNameKey,
+                                                                          NSURLFileSizeKey,
+                                                                          NSURLThumbnailKey]
                                                                 options:0
                                                            errorHandler:nil];
 
-    // Dictionary containing all found directories
-    NSMutableDictionary<NSURL*, FileSystemItem*> *directories = [NSMutableDictionary new];
-    [directories setObject:self forKey:self.url];
+    // dictionary keeping references to all found directories
+    NSMutableDictionary<NSURL*, FileSystemItem*> *dirCache = [NSMutableDictionary new];
+    [dirCache setObject:self forKey:self.url];
 
     for (NSURL *fetchedURL in dirEnumerator)
     {
-        if ([self isCancelled]) { break; }
+        if ([self.fetchingOperation isCancelled])
+        {
+            self.cancelled = YES;
+            break;
+        }
 
         FileSystemItem *fetchedItem = [[FileSystemItem alloc] initWithURL:fetchedURL];
-        FileSystemItem *parentItem = [directories objectForKey:fetchedURL.parentURL];
+        FileSystemItem *parentItem = [dirCache objectForKey:fetchedURL.parentURL];
 
         fetchedItem.parent = parentItem;
         fetchedItem.name = fetchedURL.name;
-        fetchedItem.icon = fetchedURL.thumbnail;
+        fetchedItem.path = fetchedURL.path;
+        fetchedItem.icon = [[NSWorkspace sharedWorkspace] iconForFile:fetchedURL.path];
         fetchedItem.size = fetchedURL.fileSize;
 
         [parentItem.children addObject:fetchedItem];
 
-        // if fetched item is a directory add it to the list of directories
+        // if fetched item is a directory add it to the list of all found directories
         if (fetchedURL.isDirectory)
         {
-            [directories setObject:fetchedItem forKey:fetchedURL];
-
-            if (parentItem && dirEnumerator.level < 4 &&
-                [self.delegate respondsToSelector:@selector(fileSystemItem:fetchingURL:)])
+            fetchedItem.children = [NSMutableArray new];
+            self.fetchingURL = fetchedURL;
+            [dirCache setObject:fetchedItem forKey:fetchedURL];
+        }
+        // if fetched item is a file add it's size to all parent directories
+        else
+        {
+            for (FileSystemItem *parentIterator = parentItem;
+                 parentIterator;
+                 parentIterator = parentIterator.parent)
             {
-                [self.delegate fileSystemItem:self fetchingURL:parentItem.url];
+                 parentIterator.size += fetchedItem.size;
             }
         }
     }
-
-    if ([self.delegate respondsToSelector:@selector(fileSystemItemDidStopFetching:cancelled:)])
-    {
-        [self.delegate fileSystemItemDidStopFetching:self cancelled:self.cancelled];
-    }
-
-    self.fetching = NO;
-    return YES;
+    self.fetched = YES;
 }
 
 - (void)cancelFetching
 {
-    self.cancelled = YES;
+    [self.fetchingOperation cancel];
 }
 
 @end

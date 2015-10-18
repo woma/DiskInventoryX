@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
     <objects>
@@ -64,9 +63,9 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                             <connections>
-                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.totalCapacity" id="Ndx-0j-MBc">
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.totalCapacity" id="gR7-8Y-7W8">
                                                                     <dictionary key="options">
-                                                                        <string key="NSValueTransformerName">VolumeSizeTransformer</string>
+                                                                        <string key="NSValueTransformerName">FileSizeTransformer</string>
                                                                     </dictionary>
                                                                 </binding>
                                                             </connections>
@@ -87,9 +86,9 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                             <connections>
-                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.usedCapacity" id="hN7-t7-IWZ">
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.usedCapacity" id="cgL-Jb-Vec">
                                                                     <dictionary key="options">
-                                                                        <string key="NSValueTransformerName">VolumeSizeTransformer</string>
+                                                                        <string key="NSValueTransformerName">FileSizeTransformer</string>
                                                                     </dictionary>
                                                                 </binding>
                                                             </connections>
@@ -110,9 +109,9 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                             <connections>
-                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.freeCapacity" id="hDE-Ku-Rzu">
+                                                                <binding destination="Nyr-id-kyP" name="value" keyPath="objectValue.freeCapacity" id="iS6-iO-3M4">
                                                                     <dictionary key="options">
-                                                                        <string key="NSValueTransformerName">VolumeSizeTransformer</string>
+                                                                        <string key="NSValueTransformerName">FileSizeTransformer</string>
                                                                     </dictionary>
                                                                 </binding>
                                                             </connections>

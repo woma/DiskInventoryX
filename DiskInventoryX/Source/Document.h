@@ -29,14 +29,10 @@
  
  */
 
-#import "FileSystemItem.h"
+@class FileSystemItem;
 
+@interface Document : NSDocument
 
-@class LoadingPanelController;
-
-@interface Document : NSDocument <FileSystemItemDelegate>
-
-@property (nonatomic, strong) LoadingPanelController *progressController;
 @property (nonatomic, strong) FileSystemItem *rootItem;
 @property (nonatomic, weak) FileSystemItem *selectedItem;
 
